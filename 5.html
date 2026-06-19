@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Active Programs — Disha × TalentGro</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="5.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">📐 Blueprint File 05 — Opportunities</span>
+  <nav class="topbar-nav">
+    <a href="1.html">Home</a>
+    <a href="2.html">Token Economy</a>
+    <a href="3.html">Refer &amp; Earn</a>
+    <a href="4.html">Proof of Impact</a>
+    <a href="5.html" class="active">Active Programs</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="hero-badge"><span class="dot"></span>Blueprint Document 05 of 05</div>
+  <h1>Active Volunteering <span>Programs</span><br>&amp; Opportunities</h1>
+  <p>Apply for open chapters, wellness initiatives, and green campaigns. Build real skills while creating measurable social impact.</p>
+  <div class="pill-row">
+    <span class="pill pill-disha">🤝 Campus Ambassadors</span>
+    <span class="pill pill-coin">🪙 Earn 1000+ DSC</span>
+    <span class="pill pill-talent">🎓 TalentGro Verified</span>
+  </div>
+</div>
+
+<!-- SECTION 1: ACTIVE PROGRAMS LIST -->
+<div class="section">
+  <div class="section-label">Section 5.1</div>
+  <h2 class="section-title">Open Volunteering Channels</h2>
+  <p class="section-sub">Select an active program below to review its structure, open roles, and credit rewards. Click apply to submit your application.</p>
+
+  <div class="programs-container">
+    
+    <!-- PROGRAM CARD 1: CAMPUS AMBASSADOR -->
+    <div class="program-detail-card" id="campus-ambassador">
+      <div class="card-ribbon">🔥 Popular</div>
+      <div class="card-main-header">
+        <div class="prog-icon">🎓</div>
+        <div class="prog-title-area">
+          <h3>Disha Campus Ambassador Program</h3>
+          <span class="prog-tag">Chapter Network</span>
+        </div>
+      </div>
+      <p class="prog-desc">
+        Establish a Disha Chapter in your university, organize events, recruit volunteers, and act as a bridge between the campus community and Disha Trust. Drive change on the ground while developing strong leadership and communication skills.
+      </p>
+
+      <div class="chapter-breakdown">
+        <h4>Chapter Structure (Per College)</h4>
+        <div class="structure-grid">
+          <div class="struct-item lead">
+            <span class="num">1</span>
+            <span class="role">Chapter Lead</span>
+            <span class="sub-role">Coordinates events &amp; HQ comms</span>
+          </div>
+          <div class="struct-item core">
+            <span class="num">5</span>
+            <span class="role">Core Members</span>
+            <span class="sub-role">Manage media, tech &amp; logistics</span>
+          </div>
+          <div class="struct-item volunteer">
+            <span class="num">20</span>
+            <span class="role">Volunteers</span>
+            <span class="sub-role">Execute ground awareness drives</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rewards-box">
+        <div class="rewards-header">🎁 PROGRAM BENEFITS &amp; DSC REWARDS</div>
+        <ul class="rewards-list">
+          <li><strong>Chapter Lead:</strong> 1,200 DSC + 3 DSC-P + Direct Industry Mentorship</li>
+          <li><strong>Core Members:</strong> 800 DSC + 1 DSC-P + Co-branded Certificate</li>
+          <li><strong>Volunteers:</strong> 400 DSC + Skill Badges on TalentGro</li>
+        </ul>
+      </div>
+
+      <div class="card-action">
+        <button class="apply-btn" onclick="openApplyModal('Disha Campus Ambassador Program', ['Chapter Lead', 'Core Member', 'Volunteer'])">Apply for this Program</button>
+      </div>
+    </div>
+
+    <!-- PROGRAM CARD 2: EMOTIONAL WELLNESS -->
+    <div class="program-detail-card" id="wellness-program">
+      <div class="card-main-header">
+        <div class="prog-icon">🧠</div>
+        <div class="prog-title-area">
+          <h3>Emotional Wellness Campaign</h3>
+          <span class="prog-tag">Health &amp; Wellness</span>
+        </div>
+      </div>
+      <p class="prog-desc">
+        Support mental health advocacy and wellness education. Facilitate regional online webinars, set up interactive on-campus mental health booths, and distribute peer-support resource kits developed by professional counselors.
+      </p>
+
+      <div class="chapter-breakdown">
+        <h4>Campaign Team Structure</h4>
+        <div class="structure-grid">
+          <div class="struct-item lead">
+            <span class="num">3</span>
+            <span class="role">Wellness Facilitators</span>
+            <span class="sub-role">Host webinars and group sessions</span>
+          </div>
+          <div class="struct-item volunteer">
+            <span class="num">10</span>
+            <span class="role">Campaign Volunteers</span>
+            <span class="sub-role">Moderate forums and share resources</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rewards-box">
+        <div class="rewards-header">🎁 PROGRAM BENEFITS &amp; DSC REWARDS</div>
+        <ul class="rewards-list">
+          <li><strong>Wellness Facilitators:</strong> 700 DSC + 1 DSC-P + Mental Health Advocate Badge</li>
+          <li><strong>Campaign Volunteers:</strong> 350 DSC + Peer Outreach Certificate</li>
+        </ul>
+      </div>
+
+      <div class="card-action">
+        <button class="apply-btn" onclick="openApplyModal('Emotional Wellness Campaign', ['Wellness Facilitator', 'Campaign Volunteer'])">Apply for this Program</button>
+      </div>
+    </div>
+
+    <!-- PROGRAM CARD 3: CLEAN & GREEN -->
+    <div class="program-detail-card" id="green-program">
+      <div class="card-main-header">
+        <div class="prog-icon">🌱</div>
+        <div class="prog-title-area">
+          <h3>Clean &amp; Green India Drive</h3>
+          <span class="prog-tag">Environment</span>
+        </div>
+      </div>
+      <p class="prog-desc">
+        Mobilize community-led garbage collection drives, coordinate local tree plantation drives, and advocate for plastic-free schools and colleges in collaboration with resident welfare associations.
+      </p>
+
+      <div class="chapter-breakdown">
+        <h4>Drive Setup</h4>
+        <div class="structure-grid">
+          <div class="struct-item lead">
+            <span class="num">2</span>
+            <span class="role">Event Coordinators</span>
+            <span class="sub-role">Manage waste logistics &amp; site permissions</span>
+          </div>
+          <div class="struct-item volunteer">
+            <span class="num">15</span>
+            <span class="role">Green Volunteers</span>
+            <span class="sub-role">Handle plantation and cleanups</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rewards-box">
+        <div class="rewards-header">🎁 PROGRAM BENEFITS &amp; DSC REWARDS</div>
+        <ul class="rewards-list">
+          <li><strong>Event Coordinators:</strong> 600 DSC + Local Authority Coordinator Badge</li>
+          <li><strong>Green Volunteers:</strong> 300 DSC + Field Action Certificate</li>
+        </ul>
+      </div>
+
+      <div class="card-action">
+        <button class="apply-btn" onclick="openApplyModal('Clean & Green India Drive', ['Event Coordinator', 'Green Volunteer'])">Apply for this Program</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- APPLICATION MODAL -->
+<div class="modal-overlay" id="applyModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeApplyModal()" aria-label="Close modal">&#215;</button>
+    <h3 id="modalTitle">Apply for Volunteer Program</h3>
+    <p id="modalSubtitle" class="modal-sub">Fill out the details below to submit your application to the Disha coordinators.</p>
+    
+    <form id="applyForm" onsubmit="handleApplySubmit(event)">
+      <div class="form-group">
+        <label for="formProgram">Target Program</label>
+        <input type="text" id="formProgram" readonly />
+      </div>
+      
+      <div class="form-group">
+        <label for="formRole">Preferred Role</label>
+        <select id="formRole" required>
+          <!-- Filled dynamically -->
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="formName">Full Name</label>
+          <input type="text" id="formName" placeholder="e.g. Shourya Garg" required />
+        </div>
+        <div class="form-group">
+          <label for="formEmail">Email Address</label>
+          <input type="email" id="formEmail" placeholder="yourname@gmail.com" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="formCollege">College / University Name</label>
+        <input type="text" id="formCollege" placeholder="e.g. Delhi University" required />
+      </div>
+
+      <div class="form-group">
+        <label for="formStatement">Why are you interested in this program?</label>
+        <textarea id="formStatement" rows="4" placeholder="Briefly describe your interest or past experience..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+<!-- SUCCESS RECEIPT MODAL -->
+<div class="modal-overlay" id="successModal" aria-hidden="true">
+  <div class="modal-card success-card" role="dialog" aria-modal="true">
+    <div class="success-icon">✅</div>
+    <h3>Application Submitted!</h3>
+    <p class="success-msg">Your details have been registered. A Disha chapter coordinator will review your profile and reach out within 3 business days.</p>
+    
+    <div class="receipt-box">
+      <div class="receipt-title">🎫 Application Receipt</div>
+      <div class="receipt-row"><span>Program:</span> <strong id="receiptProgram">-</strong></div>
+      <div class="receipt-row"><span>Role:</span> <strong id="receiptRole">-</strong></div>
+      <div class="receipt-row"><span>Candidate:</span> <strong id="receiptName">-</strong></div>
+      <div class="receipt-row"><span>College:</span> <strong id="receiptCollege">-</strong></div>
+      <div class="receipt-row"><span>Simulated Sign-up Bonus:</span> <strong style="color:var(--green)">+100 DSC Coins</strong></div>
+    </div>
+    
+    <button class="dismiss-btn" onclick="closeSuccessModal()">Return to Programs</button>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="applyToast"></div>
+
+<script src="5.js"></script>
+</body>
+</html>

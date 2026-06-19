@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Economy & Tokenomics Architecture — Disha × TalentGro</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="2.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">📐 Blueprint File 01 — Tokenomics</span>
+  <nav class="topbar-nav">
+    <a href="1.html">Home</a>
+    <a href="2.html" class="active">Token Economy</a>
+    <a href="3.html">Refer &amp; Earn</a>
+    <a href="4.html">Proof of Impact</a>
+    <a href="5.html">Active Programs</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="hero-badge"><span class="dot"></span>Blueprint Document 01 of 04</div>
+  <h1>Economy & <span>Tokenomics</span><br>Architecture</h1>
+  <p>The complete currency design, earning matrix, redemption rules, tier system, and economic guardrails for the Disha × TalentGro Global ecosystem.</p>
+  <div class="pill-row">
+    <span class="pill pill-disha">🤝 Disha — Earn</span>
+    <span class="pill pill-coin">🪙 DiSha Coins</span>
+    <span class="pill pill-talent">🎓 TalentGro — Redeem</span>
+  </div>
+</div>
+
+<!-- ═══ SECTION 1: CURRENCY ═══ -->
+<div class="section">
+  <div class="section-label">Section 1.1</div>
+  <h2 class="section-title">Core Currency Definition</h2>
+  <p class="section-sub">A single, unified token bridges both platforms — earned through impact on Disha, spent on growth at TalentGro Global.</p>
+
+  <div class="intro-description-box" style="margin: 24px 0; padding: 24px; background: rgba(50,48,160,0.1); border-left: 3px solid var(--talent); border-radius: var(--r);">
+    <h3 style="font-family:var(--mono); font-size:1rem; margin-bottom:8px; color:var(--gold);">About TalentGro Global</h3>
+    <p style="font-size:0.88rem; line-height:1.6; color:var(--text);">
+      TalentGro Global is an education and career development platform that helps students and professionals build skills, gain practical experience, and improve their career opportunities. The company provides AI-based career counseling, career assessments, skill development courses, internships with live projects, mentorship from industry experts, placement assistance, resume-building tools, and job portal access. It also works with colleges, universities, and organizations by offering faculty development programs, AI upskilling, placement training, and career mapping solutions. Its main goal is to bridge the gap between learning and employment by helping individuals become job-ready through real-world training and career guidance.
+    </p>
+  </div>
+
+  <div class="currency-showcase">
+    <div class="coin-card">
+      <div class="coin-symbol">🪙</div>
+      <div class="coin-name">DSC</div>
+      <div class="coin-full">DiSha Coin — The Ecosystem Token</div>
+      <div class="coin-stat"><span class="val">1</span><span class="unit">DSC</span></div>
+      <div class="coin-desc" style="margin-top:8px">The primary cross-platform currency. Earned on Disha for every verified volunteer action. Redeemable on TalentGro Global for skill development courses, AI-based career counseling, career assessments, resume-building tools, internships, and job portal access. Non-transferable. Expires after 18 months of account inactivity.</div>
+    </div>
+    <div class="coin-card">
+      <div class="coin-symbol">💎</div>
+      <div class="coin-name">DSC-P</div>
+      <div class="coin-full">DiSha Premium — Prestige Token</div>
+      <div class="coin-stat"><span class="val">1</span><span class="unit">DSC-P = 5 DSC</span></div>
+      <div class="coin-desc" style="margin-top:8px">Awarded only for high-impact actions: flagship events, verified open-source contributions, or mentorship completion. Unlocks exclusive TalentGro benefits (mentorship from industry experts, placement assistance, faculty development programs, and live projects) that DSC alone cannot access.</div>
+    </div>
+  </div>
+
+  <div class="conversion-box">
+    <div class="conv-side">
+      <div class="platform" style="color:#FF7070">🤝 DISHA</div>
+      <div class="amount" style="color:var(--gold)">100 DSC</div>
+      <div class="label">earned through contribution</div>
+    </div>
+    <div class="conv-arrow">⇄</div>
+    <div class="conv-side">
+      <div class="platform" style="color:#8080FF">🎓 TALENTGRO</div>
+      <div class="amount" style="color:var(--green)">₹50</div>
+      <div class="label">discount value at redemption</div>
+    </div>
+  </div>
+
+  <div class="formula">
+    Base Rate: 100 DSC = ₹50<br>
+    DSC-P Rate: 1 DSC-P = 5× base value = ₹2.50 per DSC-P<br>
+    Max Wallet Discount: 30% of any single course price<br>
+    Min Redemption: 200 DSC per transaction<br>
+    Validity: 18 months from last platform activity
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══ SECTION 2: EARNING MATRIX ═══ -->
+<div class="section">
+  <div class="section-label">Section 1.2</div>
+  <h2 class="section-title">Earning Matrix — Disha Platform</h2>
+  <p class="section-sub">Every action is verified before coins are credited. Verification tier prevents gaming the system. All values are per single verified instance.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Activity</th>
+          <th>DSC Earned</th>
+          <th>DSC-P</th>
+          <th>Verification</th>
+          <th>Max/Month</th>
+          <th>Difficulty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- CONTENT -->
+        <tr><td colspan="7" style="background:rgba(245,166,35,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--gold);padding:10px 16px">✍️ CONTENT CREATION</td></tr>
+        <tr>
+          <td rowspan="5">Content</td>
+          <td>Short article / blog post (500–900 words)</td>
+          <td><span class="badge badge-green">+50 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-amber">Editor Review</span></td>
+          <td>4×</td>
+          <td>Low</td>
+        </tr>
+        <tr>
+          <td>Long-form research article (900–2000 words)</td>
+          <td><span class="badge badge-green">+120 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-amber">Editor Review</span></td>
+          <td>2×</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td>Case study / impact report</td>
+          <td><span class="badge badge-green">+200 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-amber">Admin Verified</span></td>
+          <td>1×</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>Video tutorial (recorded, 5–15 min)</td>
+          <td><span class="badge badge-green">+180 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-amber">QA Review</span></td>
+          <td>2×</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>Infographic / visual explainer</td>
+          <td><span class="badge badge-green">+80 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-amber">Editor Review</span></td>
+          <td>4×</td>
+          <td>Medium</td>
+        </tr>
+        <!-- COMMUNITY -->
+        <tr><td colspan="7" style="background:rgba(34,201,122,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--green);padding:10px 16px">🤝 COMMUNITY TASKS</td></tr>
+        <tr>
+          <td rowspan="5">Community</td>
+          <td>Moderate forum / answer queries (per week)</td>
+          <td><span class="badge badge-green">+60 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-blue">Auto (activity log)</span></td>
+          <td>4×</td>
+          <td>Low</td>
+        </tr>
+        <tr>
+          <td>Organize a local community event</td>
+          <td><span class="badge badge-green">+300 DSC</span></td>
+          <td><span class="badge badge-purple">+1 DSC-P</span></td>
+          <td><span class="badge badge-amber">Admin + Photo Proof</span></td>
+          <td>2×</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>Peer mentor a junior volunteer (4-week cycle)</td>
+          <td><span class="badge badge-green">+250 DSC</span></td>
+          <td><span class="badge badge-purple">+1 DSC-P</span></td>
+          <td><span class="badge badge-amber">Admin Verified</span></td>
+          <td>2×</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>Translate content to regional language</td>
+          <td><span class="badge badge-green">+100 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-amber">Language Lead</span></td>
+          <td>6×</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td>Recruit a verified new volunteer</td>
+          <td><span class="badge badge-green">+150 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-blue">Auto (referral code)</span></td>
+          <td>5×</td>
+          <td>Medium</td>
+        </tr>
+        <!-- TECH -->
+        <tr><td colspan="7" style="background:rgba(77,158,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--blue);padding:10px 16px">💻 TECHNICAL VOLUNTEERING</td></tr>
+        <tr>
+          <td rowspan="5">Technical</td>
+          <td>Open-source PR merged (minor bug fix)</td>
+          <td><span class="badge badge-green">+200 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-blue">GitHub API auto</span></td>
+          <td>8×</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td>Open-source PR merged (feature / major)</td>
+          <td><span class="badge badge-green">+500 DSC</span></td>
+          <td><span class="badge badge-purple">+2 DSC-P</span></td>
+          <td><span class="badge badge-blue">GitHub API auto</span></td>
+          <td>3×</td>
+          <td>Very High</td>
+        </tr>
+        <tr>
+          <td>Build/maintain a platform tool or widget</td>
+          <td><span class="badge badge-green">+400 DSC</span></td>
+          <td><span class="badge badge-purple">+2 DSC-P</span></td>
+          <td><span class="badge badge-amber">Tech Lead Review</span></td>
+          <td>2×</td>
+          <td>Very High</td>
+        </tr>
+        <tr>
+          <td>Conduct a technical workshop/webinar</td>
+          <td><span class="badge badge-green">+350 DSC</span></td>
+          <td><span class="badge badge-purple">+1 DSC-P</span></td>
+          <td><span class="badge badge-amber">Admin + Attendance log</span></td>
+          <td>2×</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>Data entry / research task (batch)</td>
+          <td><span class="badge badge-green">+80 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-blue">Auto (completion)</span></td>
+          <td>8×</td>
+          <td>Low</td>
+        </tr>
+        <!-- EVENTS -->
+        <tr><td colspan="7" style="background:rgba(160,100,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:#C080FF;padding:10px 16px">🎤 EVENTS & CAMPAIGNS</td></tr>
+        <tr>
+          <td rowspan="4">Events</td>
+          <td>Attend a Disha flagship event</td>
+          <td><span class="badge badge-green">+100 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-blue">QR Check-in</span></td>
+          <td>6×</td>
+          <td>Low</td>
+        </tr>
+        <tr>
+          <td>Volunteer at a Disha flagship event (full day)</td>
+          <td><span class="badge badge-green">+400 DSC</span></td>
+          <td><span class="badge badge-purple">+2 DSC-P</span></td>
+          <td><span class="badge badge-amber">Event Lead Sign-off</span></td>
+          <td>4×</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td>Social media campaign contribution (verified reach)</td>
+          <td><span class="badge badge-green">+75 DSC</span></td>
+          <td>—</td>
+          <td><span class="badge badge-blue">Social API link</span></td>
+          <td>4×</td>
+          <td>Low</td>
+        </tr>
+        <tr>
+          <td>Represent Disha at external conference/fair</td>
+          <td><span class="badge badge-green">+500 DSC</span></td>
+          <td><span class="badge badge-purple">+3 DSC-P</span></td>
+          <td><span class="badge badge-amber">Admin Verified + Evidence</span></td>
+          <td>2×</td>
+          <td>Very High</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="guardrail-grid">
+    <div class="guardrail-item">
+      <h4>🛡️ Anti-Gaming Cap</h4>
+      <p>Hard ceiling of 2,000 DSC earned per calendar month from any single category. Users cannot earn more than 5,000 DSC total per month regardless of activity count.</p>
+    </div>
+    <div class="guardrail-item">
+      <h4>⏱️ Cooldown Rules</h4>
+      <p>Same activity type has a 48-hour cooldown window. Bulk submissions of the same task within 24 hours triggers manual review before any coins are credited.</p>
+    </div>
+    <div class="guardrail-item">
+      <h4>✅ Verification Queue</h4>
+      <p>Auto-verified activities (GitHub, QR, referral) credit within 2 hours. Editor/Admin-reviewed activities have a 72-hour SLA. Disputed submissions go to a 2-reviewer panel.</p>
+    </div>
+    <div class="guardrail-item">
+      <h4>🔒 Quality Gate</h4>
+      <p>Content with plagiarism score &gt;20% (Copyscape/Turnitin API) is auto-rejected. Community reports of low-quality work trigger a 7-day earning suspension pending review.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══ SECTION 3: REDEMPTION MATRIX ═══ -->
+<div class="section">
+  <div class="section-label">Section 1.3</div>
+  <h2 class="section-title">Redemption Matrix — TalentGro Global</h2>
+  <p class="section-sub">Users redeem DSC at checkout. Hard caps protect profitability. Premium DSC-P unlocks services that cannot be accessed with base DSC alone.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Service / Course Type</th>
+          <th>Price Range (₹)</th>
+          <th>Max Wallet %</th>
+          <th>DSC Cap</th>
+          <th>DSC-P Bonus</th>
+          <th>Min DSC to Unlock</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="7" style="background:rgba(245,166,35,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--gold);padding:10px 16px">📚 SELF-PACED COURSES</td></tr>
+        <tr>
+          <td>Starter / Free-tier course</td>
+          <td>₹0</td>
+          <td>N/A</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>Already free; no redemption needed</td>
+        </tr>
+        <tr>
+          <td>Foundation course (recorded)</td>
+          <td>₹499–₹1,999</td>
+          <td><span class="badge badge-green">30%</span></td>
+          <td>600 DSC</td>
+          <td>—</td>
+          <td>200 DSC</td>
+          <td>Good entry-level incentive</td>
+        </tr>
+        <tr>
+          <td>Professional course (recorded)</td>
+          <td>₹2,000–₹5,999</td>
+          <td><span class="badge badge-amber">25%</span></td>
+          <td>1,500 DSC</td>
+          <td>+5% if DSC-P holder</td>
+          <td>500 DSC</td>
+          <td>Sweet spot for most users</td>
+        </tr>
+        <tr>
+          <td>Advanced / Specialization course</td>
+          <td>₹6,000–₹14,999</td>
+          <td><span class="badge badge-amber">20%</span></td>
+          <td>3,000 DSC</td>
+          <td>+5% if DSC-P holder</td>
+          <td>1,000 DSC</td>
+          <td>Protects high-value margins</td>
+        </tr>
+        <tr><td colspan="7" style="background:rgba(34,201,122,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--green);padding:10px 16px">🎓 LIVE COHORT PROGRAMS</td></tr>
+        <tr>
+          <td>Live cohort — short (4–8 weeks)</td>
+          <td>₹5,000–₹12,000</td>
+          <td><span class="badge badge-amber">20%</span></td>
+          <td>2,400 DSC</td>
+          <td>+5% if DSC-P holder</td>
+          <td>800 DSC</td>
+          <td>Live instruction has higher cost base</td>
+        </tr>
+        <tr>
+          <td>Live cohort — long (3–6 months)</td>
+          <td>₹15,000–₹50,000</td>
+          <td><span class="badge badge-red">15%</span></td>
+          <td>7,500 DSC</td>
+          <td>+3% if DSC-P holder</td>
+          <td>2,000 DSC</td>
+          <td>Cap lower; margin must be protected</td>
+        </tr>
+        <tr>
+          <td>Bootcamp / Intensive program</td>
+          <td>₹30,000–₹1,00,000</td>
+          <td><span class="badge badge-red">10%</span></td>
+          <td>10,000 DSC</td>
+          <td>+2% if DSC-P holder</td>
+          <td>3,000 DSC</td>
+          <td>For flagship programs; strict cap</td>
+        </tr>
+        <tr><td colspan="7" style="background:rgba(77,158,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--blue);padding:10px 16px">🧑‍💼 CAREER DEVELOPMENT SERVICES</td></tr>
+        <tr>
+          <td>Resume-building tools & assessments (AI-based)</td>
+          <td>₹299–₹999</td>
+          <td><span class="badge badge-green">50%</span></td>
+          <td>500 DSC</td>
+          <td>—</td>
+          <td>200 DSC</td>
+          <td>High incentive; low cost</td>
+        </tr>
+        <tr>
+          <td>Mock interview session (1 session)</td>
+          <td>₹500–₹1,500</td>
+          <td><span class="badge badge-green">40%</span></td>
+          <td>600 DSC</td>
+          <td>—</td>
+          <td>200 DSC</td>
+          <td>Strong engagement driver</td>
+        </tr>
+        <tr>
+          <td>AI-based career counseling & mapping (60 min)</td>
+          <td>₹1,500–₹3,000</td>
+          <td><span class="badge badge-amber">30%</span></td>
+          <td>900 DSC</td>
+          <td>DSC-P: full session unlock</td>
+          <td>5 DSC-P</td>
+          <td>DSC-P can unlock this service fully</td>
+        </tr>
+        <tr>
+          <td>LinkedIn profile audit & job portal access</td>
+          <td>₹799–₹2,000</td>
+          <td><span class="badge badge-green">40%</span></td>
+          <td>800 DSC</td>
+          <td>—</td>
+          <td>300 DSC</td>
+          <td>Career service with good margins</td>
+        </tr>
+        <tr>
+          <td>Job portal access & mentorship from industry experts</td>
+          <td>₹999</td>
+          <td><span class="badge badge-purple">DSC-P Only</span></td>
+          <td>—</td>
+          <td>10 DSC-P unlocks</td>
+          <td>10 DSC-P</td>
+          <td>Premium-only; creates prestige tier</td>
+        </tr>
+        <tr>
+          <td>Placement assistance & live project internship program</td>
+          <td>₹25,000+</td>
+          <td><span class="badge badge-red">5%</span></td>
+          <td>1,250 DSC</td>
+          <td>+5% if Elite tier</td>
+          <td>5,000 DSC</td>
+          <td>Minimal; avoid P&amp;L risk</td>
+        </tr>
+        <tr><td colspan="7" style="background:rgba(160,100,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:#C080FF;padding:10px 16px">🏆 CERTIFICATIONS</td></tr>
+        <tr>
+          <td>TalentGro digital certificate (any course)</td>
+          <td>₹199</td>
+          <td><span class="badge badge-green">100%</span></td>
+          <td>400 DSC</td>
+          <td>—</td>
+          <td>400 DSC</td>
+          <td>Can be fully free for top volunteers</td>
+        </tr>
+        <tr>
+          <td>Disha × TalentGro co-branded certificate</td>
+          <td>Free</td>
+          <td>N/A</td>
+          <td>—</td>
+          <td>Auto on 1,000+ DSC lifetime</td>
+          <td>1,000 DSC (lifetime)</td>
+          <td>Major retention and branding driver</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="formula">
+    Discount Amount = min( course_price × max_wallet_pct , dsc_spent × 0.005 )<br>
+    Example: ₹3,000 course, 25% cap → max discount = ₹750 → requires 750÷0.005 = 1,500 DSC<br>
+    DSC-P Bonus stacks additively: 25% base + 5% DSC-P bonus = 30% total cap<br>
+    Minimum order value after discount: ₹99 (prevents zero-rupee orders)
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- ═══ SECTION 4: TIER SYSTEM ═══ -->
+<div class="section">
+  <div class="section-label">Section 1.4</div>
+  <h2 class="section-title">Volunteer Tier System</h2>
+  <p class="section-sub">Lifetime accumulated DSC (not spendable balance) determines tier. Spending coins never causes tier demotion — this prevents users from hoarding instead of engaging.</p>
+
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-badge" style="background:rgba(255,255,255,.1);color:var(--muted)">ENTRY</div>
+      <div class="tier-icon">🌱</div>
+      <div class="tier-name" style="color:#888">SEEDLING</div>
+      <div class="tier-range">0 – 999 DSC lifetime</div>
+      <ul class="tier-perks">
+        <li>Basic wallet access</li>
+        <li>1 free resume review/yr</li>
+        <li>Disha community badge</li>
+        <li>Course discounts up to cap</li>
+      </ul>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge" style="background:rgba(34,201,122,.2);color:var(--green)">ACTIVE</div>
+      <div class="tier-icon">⚡</div>
+      <div class="tier-name" style="color:var(--green)">CATALYST</div>
+      <div class="tier-range">1,000 – 4,999 DSC</div>
+      <ul class="tier-perks">
+        <li>+5% earning bonus</li>
+        <li>Priority verification queue</li>
+        <li>2 mock interviews/yr</li>
+        <li>Featured volunteer profile</li>
+        <li>Disha × TalentGro co-cert</li>
+      </ul>
+    </div>
+    <div class="tier-card" style="border-color:rgba(245,166,35,.4)">
+      <div class="tier-badge" style="background:rgba(245,166,35,.2);color:var(--gold)">SENIOR</div>
+      <div class="tier-icon">🔥</div>
+      <div class="tier-name" style="color:var(--gold)">IGNITER</div>
+      <div class="tier-range">5,000 – 14,999 DSC</div>
+      <ul class="tier-perks">
+        <li>+10% earning bonus</li>
+        <li>1 free career session/yr</li>
+        <li>LinkedIn recommendation</li>
+        <li>Early course access</li>
+        <li>Mentorship eligibility</li>
+        <li>Verified Volunteer badge</li>
+      </ul>
+    </div>
+    <div class="tier-card" style="border-color:rgba(160,100,255,.5)">
+      <div class="tier-badge" style="background:rgba(160,100,255,.2);color:#C080FF">ELITE</div>
+      <div class="tier-icon">👑</div>
+      <div class="tier-name" style="color:#C080FF">CHAMPION</div>
+      <div class="tier-range">15,000+ DSC lifetime</div>
+      <ul class="tier-perks">
+        <li>+15% earning bonus</li>
+        <li>Unlimited career services</li>
+        <li>Speaker slot priority</li>
+        <li>Equity partnership invite</li>
+        <li>Advisory board eligibility</li>
+        <li>Annual physical award</li>
+        <li>Job referral network free</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <strong>Business Sustainability Note:</strong> At the base rate of ₹50 per 100 DSC, and a 5,000 DSC monthly earning cap, the maximum monthly liability per user is ₹2,500 in discounts. Since each volunteer also drives ₹X in platform value (content, events, community growth), the ROI is strongly positive. The 30% maximum discount cap ensures TalentGro retains at minimum 70% revenue on every transaction. DSC-P prestige tokens keep high-value services gated, creating aspirational tiers that drive long-term retention without eroding the P&L.
+  </div>
+</div>
+
+</body>
+</html>

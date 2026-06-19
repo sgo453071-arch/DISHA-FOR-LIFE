@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Referrals & Community Growth — Disha × TalentGro</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="3.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">📐 Blueprint File 03 — Referrals</span>
+  <nav class="topbar-nav">
+    <a href="1.html">Home</a>
+    <a href="2.html">Token Economy</a>
+    <a href="3.html" class="active">Refer &amp; Earn</a>
+    <a href="4.html">Proof of Impact</a>
+    <a href="5.html">Active Programs</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="hero-badge"><span class="dot"></span>Blueprint Document 03 of 04</div>
+  <h1>Referrals & <span>Community</span><br>Growth Engine</h1>
+  <p>The viral growth mechanics, peer invitation challenges, milestone trackers, and quality guidelines for the Disha × TalentGro Global ecosystem.</p>
+  <div class="pill-row">
+    <span class="pill pill-disha">🤝 Invite Peers</span>
+    <span class="pill pill-coin">🪙 +150 DSC Each</span>
+    <span class="pill pill-talent">🎓 Scale Impact</span>
+  </div>
+</div>
+
+<!-- SECTION 1: HOW IT WORKS -->
+<div class="section">
+  <div class="section-label">Section 3.1</div>
+  <h2 class="section-title">The Referral Loop</h2>
+  <p class="section-sub">Volunteers bring others to the platform, doubling the impact on Disha and unlocking shared rewards on TalentGro.</p>
+
+  <div class="referral-steps">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>Share Code</h3>
+      <p>Generate your unique referral code from your dashboard and share it with friends, students, or fellow academicians.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>Peer Joins & Contributes</h3>
+      <p>Your referred peer signs up and completes their first verified volunteer activity (e.g. event attendance or blog post submission).</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>Shared Reward</h3>
+      <p>Both you and your referred friend instantly receive <strong>+150 DSC</strong> in your wallets once their first activity is approved.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- SECTION 2: MILESTONES -->
+<div class="section">
+  <div class="section-label">Section 3.2</div>
+  <h2 class="section-title">Engagement Challenges</h2>
+  <p class="section-sub">Achieve key milestones by growing your circle and unlock additional token bonuses and prestige status.</p>
+
+  <div class="milestones-container">
+    <div class="milestone-card">
+      <div class="milestone-icon">🌱</div>
+      <div class="milestone-details">
+        <h3>The Catalyst Spark</h3>
+        <p>Invite 3 members who complete at least one activity.</p>
+        <span class="bonus-tag">+500 DSC Bonus</span>
+      </div>
+      <div class="milestone-status">Milestone 1</div>
+    </div>
+
+    <div class="milestone-card active-border">
+      <div class="milestone-icon">⚡</div>
+      <div class="milestone-details">
+        <h3>The Community Builder</h3>
+        <p>Invite 10 members who complete at least one activity.</p>
+        <span class="bonus-tag">+2,000 DSC + Catalyst Tier Auto-Unlock</span>
+      </div>
+      <div class="milestone-status current">Target Challenge</div>
+    </div>
+
+    <div class="milestone-card">
+      <div class="milestone-icon">👑</div>
+      <div class="milestone-details">
+        <h3>The Viral Ambassador</h3>
+        <p>Invite 25 members who complete at least one activity.</p>
+        <span class="bonus-tag">+5,000 DSC + 5 DSC-P + Physical Certificate</span>
+      </div>
+      <div class="milestone-status">Ambassador Level</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- SECTION 3: SIMULATOR -->
+<div class="section">
+  <div class="section-label">Section 3.3</div>
+  <h2 class="section-title">Interactive Referral Dashboard</h2>
+  <p class="section-sub">Simulate copying your code, sharing it, and completing invites to see how progress ticks towards the next milestone.</p>
+
+  <div class="dashboard-sim">
+    <div class="sim-left">
+      <h3>Your Referral Hub</h3>
+      <div class="ref-code-box">
+        <span class="label">YOUR REFERRAL CODE</span>
+        <div class="code-row">
+          <input type="text" id="refCode" value="DISHA-VOL-82F" readonly/>
+          <button id="copyBtn" onclick="copyReferralCode()">Copy Code</button>
+        </div>
+      </div>
+
+      <div class="sim-controls">
+        <h4>Simulate Actions</h4>
+        <p class="desc">Click the button below to simulate a referred friend completing their first verified task.</p>
+        <button id="simInviteBtn" onclick="simulateNewInvite()">Simulate Successful Invite (+150 DSC)</button>
+      </div>
+    </div>
+
+    <div class="sim-right">
+      <div class="progress-box">
+        <div class="progress-header">
+          <span>Milestone Progress: Community Builder</span>
+          <span id="inviteCount">7 / 10 Invites</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="progressBar" style="width: 70%;"></div>
+        </div>
+        <p class="progress-msg" id="progressMsg">3 more invites needed to unlock the +2,000 DSC bonus!</p>
+      </div>
+
+      <div class="referred-list-box">
+        <h4>Recently Referred Friends</h4>
+        <ul class="referred-list" id="referredList">
+          <li>
+            <div class="friend-info">
+              <span class="name">Aarav Sharma</span>
+              <span class="action">Merged: Forum Moderation</span>
+            </div>
+            <span class="status-badge verified">Verified (+150 DSC)</span>
+          </li>
+          <li>
+            <div class="friend-info">
+              <span class="name">Priya Patel</span>
+              <span class="action">Submitted: Educational Article</span>
+            </div>
+            <span class="status-badge pending">Pending Editor Review</span>
+          </li>
+          <li>
+            <div class="friend-info">
+              <span class="name">Rohan Das</span>
+              <span class="action">Registered: Account Created</span>
+            </div>
+            <span class="status-badge registered">Registered</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- SECTION 4: GUARDRAILS -->
+<div class="section">
+  <div class="section-label">Section 3.4</div>
+  <h2 class="section-title">Viral Growth Guardrails</h2>
+  <p class="section-sub">Anti-abuse policies ensure all referrals drive genuine value for the education and wellness ecosystem.</p>
+
+  <div class="guardrail-grid">
+    <div class="guardrail-item">
+      <h4>🚫 Anti-Sybil Validation</h4>
+      <p>Accounts registering from the same IP address or device fingerprint within a 30-day window are flagged. Self-referrals will lead to account suspension.</p>
+    </div>
+    <div class="guardrail-item">
+      <h4>🔒 Verified Action Gate</h4>
+      <p>Points are only awarded when the referred friend completes a verified task earning at least 50 DSC. Empty account registrations receive zero rewards.</p>
+    </div>
+    <div class="guardrail-item">
+      <h4>Cap on Viral Rewards</h4>
+      <p>Maximum of 30 successful referral payouts (4,500 DSC) can be earned per user per month. Milestone bonuses do not count towards this monthly cap.</p>
+    </div>
+    <div class="guardrail-item">
+      <h4>⚖️ Manual Review Queue</h4>
+      <p>Reaching the "Viral Ambassador" milestone (25 invites) triggers an automated quality review of all referred activities prior to releasing the 5 DSC-P and physical award.</p>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <strong>Sustainability Note:</strong> Introducing referred members through a validated action gate keeps acquisition costs highly positive. At an acquisition rate of 300 DSC total liability (150 to referrer, 150 to referee), the platform spends ₹150 in course discount credits. In return, the platform receives two active contributors completing verified content, event organization, or code. This viral loops engine reduces external marketing expenses to zero.
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="3.js"></script>
+</body>
+</html>

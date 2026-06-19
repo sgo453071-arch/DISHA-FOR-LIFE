@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Proof of Impact — Disha × TalentGro</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="4.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">📐 Blueprint File 04 — Impact</span>
+  <nav class="topbar-nav">
+    <a href="1.html">Home</a>
+    <a href="2.html">Token Economy</a>
+    <a href="3.html">Refer &amp; Earn</a>
+    <a href="4.html" class="active">Proof of Impact</a>
+    <a href="5.html">Active Programs</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="hero-badge"><span class="dot"></span>Blueprint Document 04 of 04</div>
+  <h1>Proof of <span>Impact</span><br>Wall of Fame</h1>
+  <p>Verifiable volunteer records, community achievements, student coordinates, and live impact scoreboards for the Disha × TalentGro Global ecosystem.</p>
+  <div class="pill-row">
+    <span class="pill pill-disha">🤝 Verifiable Records</span>
+    <span class="pill pill-coin">🪙 Live Scoreboards</span>
+    <span class="pill pill-talent">🎓 Talent Ready</span>
+  </div>
+</div>
+
+<!-- SECTION 1: WALL OF FAME -->
+<div class="section">
+  <div class="section-label">Section 4.1</div>
+  <h2 class="section-title">Volunteer Honors List</h2>
+  <p class="section-sub">Meet our top student volunteers driving real-world change. Each profile displays authenticated impact statistics and verified credits.</p>
+
+  <div class="filter-controls">
+    <button class="filter-btn active" onclick="filterCategory('all')">Show All</button>
+    <button class="filter-btn" onclick="filterCategory('tech')">Tech Builders</button>
+    <button class="filter-btn" onclick="filterCategory('mentorship')">Student Mentors</button>
+    <button class="filter-btn" onclick="filterCategory('events')">Event Leads</button>
+  </div>
+
+  <div class="wall-grid" id="wallGrid">
+    
+    <!-- SHOURYA GARG CARD -->
+    <div class="volunteer-card" data-category="tech mentorship events">
+      <div class="card-header">
+        <div class="avatar">SG</div>
+        <div class="header-text">
+          <h3>Shourya Garg</h3>
+          <span class="level-tag champion">Elite Champion</span>
+        </div>
+      </div>
+      <ul class="stats-list">
+        <li>
+          <span class="stat-icon">⏱️</span>
+          <span class="stat-text"><strong>120 Hours</strong> Volunteered</span>
+        </li>
+        <li>
+          <span class="stat-icon">💻</span>
+          <span class="stat-text"><strong>Built NGO Website</strong> (Tech Contribution)</span>
+        </li>
+        <li>
+          <span class="stat-icon">🎓</span>
+          <span class="stat-text"><strong>Mentored 20 Students</strong> (Ignite Project)</span>
+        </li>
+        <li>
+          <span class="stat-icon">🎤</span>
+          <span class="stat-text"><strong>Organized 3 Events</strong> (Wellness Drive)</span>
+        </li>
+      </ul>
+      <div class="card-footer">
+        <div class="score-box">
+          <span class="lbl">DSC COINS EARNED</span>
+          <span class="val">8,400 DSC</span>
+        </div>
+        <button class="verify-btn" onclick="verifyCredentials('Shourya Garg', '8,400 DSC', '120', 'Built NGO Website', 'Elite Champion')">Verify Credentials</button>
+      </div>
+    </div>
+
+    <!-- AMIT KUMAR CARD -->
+    <div class="volunteer-card" data-category="tech events">
+      <div class="card-header">
+        <div class="avatar">AK</div>
+        <div class="header-text">
+          <h3>Amit Kumar</h3>
+          <span class="level-tag champion">Elite Champion</span>
+        </div>
+      </div>
+      <ul class="stats-list">
+        <li>
+          <span class="stat-icon">⏱️</span>
+          <span class="stat-text"><strong>150 Hours</strong> Volunteered</span>
+        </li>
+        <li>
+          <span class="stat-icon">💻</span>
+          <span class="stat-text"><strong>Built Coordinator Widget</strong> (Tech Dev)</span>
+        </li>
+        <li>
+          <span class="stat-icon">🎓</span>
+          <span class="stat-text"><strong>Mentored 5 Students</strong> (Regional Lead)</span>
+        </li>
+        <li>
+          <span class="stat-icon">🎤</span>
+          <span class="stat-text"><strong>Organized 5 Events</strong> (Clean & Green)</span>
+        </li>
+      </ul>
+      <div class="card-footer">
+        <div class="score-box">
+          <span class="lbl">DSC COINS EARNED</span>
+          <span class="val">9,200 DSC</span>
+        </div>
+        <button class="verify-btn" onclick="verifyCredentials('Amit Kumar', '9,200 DSC', '150', 'Built Coordinator Widget', 'Elite Champion')">Verify Credentials</button>
+      </div>
+    </div>
+
+    <!-- PRIYA SHARMA CARD -->
+    <div class="volunteer-card" data-category="mentorship">
+      <div class="card-header">
+        <div class="avatar">PS</div>
+        <div class="header-text">
+          <h3>Priya Sharma</h3>
+          <span class="level-tag igniter">Senior Igniter</span>
+        </div>
+      </div>
+      <ul class="stats-list">
+        <li>
+          <span class="stat-icon">⏱️</span>
+          <span class="stat-text"><strong>95 Hours</strong> Volunteered</span>
+        </li>
+        <li>
+          <span class="stat-icon">✍️</span>
+          <span class="stat-text"><strong>Translated 12 Articles</strong> (Regional Outreach)</span>
+        </li>
+        <li>
+          <span class="stat-icon">🎓</span>
+          <span class="stat-text"><strong>Mentored 15 Students</strong> (Financial Literacy)</span>
+        </li>
+        <li>
+          <span class="stat-icon">🎤</span>
+          <span class="stat-text"><strong>Organized 1 Event</strong> (Career Guidance Fair)</span>
+        </li>
+      </ul>
+      <div class="card-footer">
+        <div class="score-box">
+          <span class="lbl">DSC COINS EARNED</span>
+          <span class="val">6,100 DSC</span>
+        </div>
+        <button class="verify-btn" onclick="verifyCredentials('Priya Sharma', '6,100 DSC', '95', 'Translated 12 Articles', 'Senior Igniter')">Verify Credentials</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- SECTION 2: LIVE METRICS -->
+<div class="section">
+  <div class="section-label">Section 4.2</div>
+  <h2 class="section-title">Ecosystem Live Metrics</h2>
+  <p class="section-sub">Aggregated network metrics showing the combined scale of volunteering driven by our community.</p>
+
+  <div class="metrics-grid">
+    <div class="metric-item">
+      <span class="num">12,450+</span>
+      <span class="lbl">Total Volunteer Hours</span>
+    </div>
+    <div class="metric-item">
+      <span class="num">1,820+</span>
+      <span class="lbl">Students Mentored</span>
+    </div>
+    <div class="metric-item">
+      <span class="num">48</span>
+      <span class="lbl">Open Source Widgets Built</span>
+    </div>
+    <div class="metric-item">
+      <span class="num">240+</span>
+      <span class="lbl">Community Events Held</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- SECTION 3: STUDENT CTA -->
+<div class="section">
+  <div class="section-inner cta-banner">
+    <h2>Want to build your own verifiable impact profile?</h2>
+    <p>Become a volunteer today. Develop in-demand skills, build real projects, unlock premium course discounts, and get featured on our Wall of Fame to stand out to global recruiters.</p>
+    <a href="1.html#contact" class="cta-btn">Join as a Volunteer Today ➔</a>
+  </div>
+</div>
+
+<!-- CREDENTIAL MODAL -->
+<div class="modal-overlay" id="credentialModal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&#215;</button>
+    <div class="cert-border">
+      <div class="cert-body">
+        <div class="cert-logo">Disha × TalentGro</div>
+        <h2 class="cert-title">Certificate of Verifiable Impact</h2>
+        <p class="cert-intro">This certifies that</p>
+        <h3 class="cert-name" id="modalName">Shourya Garg</h3>
+        <p class="cert-text">has successfully completed outstanding volunteer activities, contributing to community upskilling, education advocacy, and digital enablement.</p>
+        
+        <div class="cert-metrics-row">
+          <div class="m-box">
+            <span class="t">Hours Logged</span>
+            <span class="v" id="modalHours">120</span>
+          </div>
+          <div class="m-box">
+            <span class="t">DSC Coins Earned</span>
+            <span class="v" id="modalScore">8,400 DSC</span>
+          </div>
+          <div class="m-box">
+            <span class="t">Key Project</span>
+            <span class="v" id="modalProject">Built NGO Website</span>
+          </div>
+        </div>
+
+        <div class="cert-footer">
+          <div class="cert-sig">
+            <span class="sig-line">Disha Trust Board</span>
+          </div>
+          <div class="cert-sig">
+            <span class="sig-line">TalentGro Executive</span>
+          </div>
+        </div>
+        <div class="cert-badge-box">
+          <span class="badge-icon">🛡️</span>
+          <span class="badge-txt">VERIFIED BLUEPRINT RECORD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="4.js"></script>
+</body>
+</html>

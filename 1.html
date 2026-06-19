@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Disha For India Foundation and Educational Trust — Empowered Self to Empowered Society. We Empower | We Make The Difference." />
+  <title>Disha For India — Empowered Self to Empowered Society</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="1.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Disha For India Home">
+    <svg class="nav-logo-icon logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="24" cy="24" r="20"/>
+      <path d="M16 14 L16 34 L26 34 Q34 34 34 24 Q34 14 26 14 Z M20 18 L25 18 Q30 18 30 24 Q30 30 25 30 L20 30 Z"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Disha for India</span>
+      <span class="nav-logo-tagline">Empowered Self to Empowered Society</span>
+    </div>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#hero">Home</a></li>
+    <li class="nav-dropdown">
+      <a href="#about">About Us</a>
+      <ul class="dropdown-menu" role="list">
+        <li><a href="#about">Vision &amp; Mission</a></li>
+        <li><a href="#about">Core Values</a></li>
+        <li><a href="#programs">Our Programs</a></li>
+        <li><a href="#about">Our Blogs</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <a href="#events">Events</a>
+      <ul class="dropdown-menu" role="list">
+        <li><a href="#events">Upcoming Events</a></li>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#events">Past Events</a></li>
+      </ul>
+    </li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="2.html">Token Economy</a></li>
+    <li><a href="3.html">Refer &amp; Earn</a></li>
+    <li><a href="4.html">Proof of Impact</a></li>
+    <li><a href="5.html">Active Programs</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="#contact" class="nav-cta">Create an Impact</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mobile-menu-header">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="24" r="20"/>
+        <path d="M16 14 L16 34 L26 34 Q34 34 34 24 Q34 14 26 14 Z M20 18 L25 18 Q30 18 30 24 Q30 30 25 30 L20 30 Z"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Disha for India</span>
+        <span class="nav-logo-tagline">Empowered Self to Empowered Society</span>
+      </div>
+    </a>
+    <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">&#215;</button>
+  </div>
+
+  <ul role="list">
+    <li class="mobile-nav-item">
+      <a href="#hero" class="mobile-nav-link">Home</a>
+    </li>
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link" onclick="toggleMobileSub(this)">
+        About Us
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="mobile-sub-menu">
+        <a href="#about">Vision &amp; Mission</a>
+        <a href="#about">Core Values</a>
+        <a href="#programs">Our Programs</a>
+        <a href="#about">Our Blogs</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link" onclick="toggleMobileSub(this)">
+        Events
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="mobile-sub-menu">
+        <a href="#events">Upcoming Events</a>
+        <a href="#gallery">Photo Gallery</a>
+        <a href="#events">Past Events</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item">
+      <a href="#programs" class="mobile-nav-link">Programs</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+    </li>
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link" onclick="toggleMobileSub(this)">
+        News
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="mobile-sub-menu">
+        <a href="#">Latest News</a>
+        <a href="#">Press Coverage</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item">
+      <a href="2.html" class="mobile-nav-link">Token Economy</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a href="3.html" class="mobile-nav-link">Refer &amp; Earn</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a href="4.html" class="mobile-nav-link">Proof of Impact</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a href="5.html" class="mobile-nav-link">Active Programs</a>
+    </li>
+    <li class="mobile-nav-item">
+      <a href="#contact" class="mobile-nav-link">Contact Us</a>
+    </li>
+  </ul>
+
+  <div class="mobile-cta-area">
+    <a href="#contact" class="mobile-cta-btn">Create an Impact</a>
+  </div>
+  <div class="mobile-contact-info">
+    <a href="mailto:inaggarwal76@gmail.com">
+      <span class="ic">✉</span>
+      inaggarwal76@gmail.com
+    </a>
+    <a href="tel:+919888877722">
+      <span class="ic">📞</span>
+      +91-9888877722
+    </a>
+  </div>
+  <div class="mobile-social">
+    <a href="#" aria-label="Twitter">🐦</a>
+    <a href="#" aria-label="Facebook">📘</a>
+    <a href="#" aria-label="Pinterest">📌</a>
+    <a href="#" aria-label="Instagram">📷</a>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-label="Hero section">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-particles" aria-hidden="true">
+    <div class="hero-particle" style="width:80px;height:80px;background:var(--amber);top:15%;left:75%;animation-delay:0s;animation-duration:9s;"></div>
+    <div class="hero-particle" style="width:48px;height:48px;background:var(--coral);top:65%;left:82%;animation-delay:2s;animation-duration:7s;"></div>
+    <div class="hero-particle" style="width:32px;height:32px;background:var(--teal);top:40%;left:90%;animation-delay:4s;animation-duration:11s;"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal" aria-hidden="true">✦ Foundation &amp; Educational Trust</div>
+    <h1 class="hero-title reveal" style="transition-delay:0.1s">Disha For India</h1>
+    <p class="hero-subtitle reveal" style="transition-delay:0.2s">Disha For India Foundation And Educational Trust</p>
+    <p class="hero-tagline reveal" style="transition-delay:0.3s">We Empower | We Make The Difference</p>
+    <div class="hero-actions">
+      <a href="#about" class="btn-primary">
+        About Us
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="2.html" class="btn-secondary">Token Economy</a>
+      <a href="3.html" class="btn-primary">Refer &amp; Earn</a>
+      <a href="4.html" class="btn-secondary">Proof of Impact</a>
+      <a href="5.html" class="btn-primary">Active Programs</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="arrow-down"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+
+    <span class="section-eyebrow">
+      Disha × TalentGro
+    </span>
+
+    <h2 class="section-title">
+      Learn • Earn • Grow
+    </h2>
+
+    <p class="section-body">
+      Volunteers earn DiSha Coins through
+      meaningful contributions on Disha
+      and redeem them for courses,
+      certifications and career services
+      on TalentGro Global.
+    </p>
+
+    <br><br>
+
+    <a href="2.html"
+       class="btn-primary">
+       Explore Token Economy →
+    </a>
+    <a href="3.html"
+       class="btn-secondary" style="border: 2px solid var(--amber); margin-left: 12px; color: var(--dark) !important;">
+       Refer &amp; Earn →
+    </a>
+
+</section>
+
+<!-- FLOATING HIGHLIGHTS SECTION -->
+<section class="section floating-highlights" aria-label="Core Philosophies">
+  <div class="section-inner">
+    <div class="highlights-grid">
+      <div class="highlight-card float-slow">
+        <div class="highlight-icon">🎓</div>
+        <h3>Lifelong Empowerment</h3>
+        <p>"Financial aid fades, but knowledge empowers forever. Volunteer today to give a student the lifelong gift of education."</p>
+      </div>
+      <div class="highlight-card float-medium">
+        <div class="highlight-icon">🤝</div>
+        <h3>Active Volunteerism</h3>
+        <p>"Our fingerprints on the lives we touch never fade. We empower individuals to lift up their entire community."</p>
+      </div>
+      <div class="highlight-card float-fast">
+        <div class="highlight-icon">⚡</div>
+        <h3>Empowered Society</h3>
+        <p>"From an empowered self comes an empowered society. Build your skills while building the future of India."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM DOCUMENTATION MODULES -->
+<section class="section ecosystem-docs" id="ecosystem-docs" aria-labelledby="docs-title">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal">Ecosystem Documentation</span>
+    <h2 class="section-title reveal" id="docs-title">Core Platform Modules</h2>
+    <p class="section-body reveal" style="max-width: 800px; margin: 0 auto 48px; text-align: center;">
+      Understanding the heart of the Disha &times; TalentGro ecosystem. Here is how our four core modules work together to empower volunteers and build a stronger community.
+    </p>
+
+    <div class="docs-grid">
+      <!-- Card 1: Token Economy -->
+      <div class="docs-card reveal" style="transition-delay:0.1s">
+        <div class="docs-card-header">
+          <span class="docs-icon">🪙</span>
+          <h3>Token Economy (Tokenomy)</h3>
+        </div>
+        <p class="docs-paragraph">
+          Our gamified Token Economy (Tokenomy) acts as the financial engine of the ecosystem. Volunteers earn DiSha Coins (DSC) and prestige DiSha Premium (DSC-P) tokens for performing verified social actions on Disha. These tokens are redeemable directly at checkout on TalentGro Global, giving volunteers access to skill development courses, AI-based career counseling, career assessments, internships, and expert mentorship. This creates a sustainable loop where students are incentivized to contribute their time and talent to help society, receiving valuable career training and certifications in return.
+        </p>
+        <a href="2.html" class="docs-link">Explore Tokenomics &rarr;</a>
+      </div>
+
+      <!-- Card 2: Refer & Earn -->
+      <div class="docs-card reveal" style="transition-delay:0.2s">
+        <div class="docs-card-header">
+          <span class="docs-icon">📣</span>
+          <h3>Refer &amp; Earn</h3>
+        </div>
+        <p class="docs-paragraph">
+          The Refer &amp; Earn system is designed to drive viral community growth by encouraging volunteers to invite their friends and peers. Both the referrer and the invited friend receive a starting reward of +150 DSC as soon as the friend completes their first verified volunteer activity. To motivate students to grow their networks, we offer targeted milestones&mdash;such as the "Community Builder" challenge, which awards an extra +2,000 DSC and auto-promotes the user to the Catalyst tier for inviting 10 members. This milestone-driven loop ensures the platform grows organically with zero marketing spend, while introducing verified, active contributors to the ecosystem.
+        </p>
+        <a href="3.html" class="docs-link">View Referral Hub &rarr;</a>
+      </div>
+
+      <!-- Card 3: Proof of Impact -->
+      <div class="docs-card reveal" style="transition-delay:0.3s">
+        <div class="docs-card-header">
+          <span class="docs-icon">🏆</span>
+          <h3>Proof of Impact</h3>
+        </div>
+        <p class="docs-paragraph">
+          The Proof of Impact page acts as a public Wall of Fame, serving as a powerful resume builder and recruiter attraction tool for students. It displays verified cards for top volunteers, showcasing their lifetime contributions, such as Shourya Garg's record of 120 hours logged and 8,400 DSC coins earned. Recruiters or universities can verify these stats on the spot by clicking the interactive "Verify Credentials" buttons, which generate high-fidelity digital certificates. This instant credibility, combined with dynamic category filters, turns volunteer work into tangible career assets, making the platform highly attractive to students looking to prove their skills.
+        </p>
+        <a href="4.html" class="docs-link">See Wall of Fame &rarr;</a>
+      </div>
+
+      <!-- Card 4: Active Programs -->
+      <div class="docs-card reveal" style="transition-delay:0.4s">
+        <div class="docs-card-header">
+          <span class="docs-icon">🚀</span>
+          <h3>Active Programs</h3>
+        </div>
+        <p class="docs-paragraph">
+          Our Active Programs portal serves as the launching pad for social action and real-world leadership development. It outlines current open campaigns, such as the flagship Disha Campus Ambassador Program which establishes student-run chapters (consisting of 1 Chapter Lead, 5 Core Members, and 20 Volunteers per college) to coordinate on-campus wellness drives and green initiatives. Students can browse open roles, understand the clear volunteer breakdowns, see estimated coin payouts, and apply instantly through an interactive simulation interface. This connects interested students directly to social problems they care about while rewarding them with simulated sign-up credits (+100 DSC) to start their volunteer journey.
+        </p>
+        <a href="5.html" class="docs-link">Apply to Programs &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ═══════════════════════════════════════════════
+     STATS BAR
+═══════════════════════════════════════════════ -->
+<section aria-label="Impact statistics">
+  <div class="stats-bar">
+    <div class="stats-bar-inner">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="5000">0</div>
+        <div class="stat-label">Development</div>
+      </div>
+      <div class="stat-item reveal" style="transition-delay:0.1s">
+        <div class="stat-number" data-target="200">0</div>
+        <div class="stat-label">Events Organized</div>
+      </div>
+      <div class="stat-item reveal" style="transition-delay:0.2s">
+        <div class="stat-number" data-target="50">0</div>
+        <div class="stat-label">Partner Organizations</div>
+      </div>
+      <div class="stat-item reveal" style="transition-delay:0.3s">
+        <div class="stat-number" data-target="15">0</div>
+        <div class="stat-label">Years of Impact</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════════ -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal">Who We Are</span>
+    <h2 class="section-title reveal" id="about-title">Empowered Self to<br>Empowered Society</h2>
+
+    <div class="about-grid">
+      <div class="about-image-wrap reveal-left">
+        <img class="about-main-img"
+          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&auto=format&fit=crop"
+          alt="Disha For India team at an event"
+          loading="lazy" />
+        <div class="about-badge">
+          <strong>15+</strong>
+          <span>Years of Empowerment</span>
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <p class="section-body" style="margin-bottom:32px">
+          Disha For India Foundation and Educational Trust is committed to transforming lives through education, emotional wellness, and community empowerment. We believe every individual has the power to create an impact — and our mission is to ignite that spark.
+        </p>
+        <p class="section-body" style="margin-bottom:32px">
+          Education is the most powerful weapon which can be used to change the world. Our fingerprints on the lives we touch never fade.
+        </p>
+
+        <div class="about-values">
+          <div class="value-card reveal" style="transition-delay:0.1s">
+            <h4>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Vision
+            </h4>
+            <p>Ignite fire among academicians to transform education and empower students to live healthy, happy and wealthy lives.</p>
+          </div>
+          <div class="value-card reveal" style="transition-delay:0.2s">
+            <h4>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Mission
+            </h4>
+            <p>Empowering communities through education, awareness and action to build a self-reliant and progressive society.</p>
+          </div>
+          <div class="value-card reveal" style="transition-delay:0.3s">
+            <h4>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Passion
+            </h4>
+            <p>Live by our thoughts and values everyday and to ignite spark in people to live a Beautiful Life.</p>
+          </div>
+          <div class="value-card reveal" style="transition-delay:0.4s">
+            <h4>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Core Value
+            </h4>
+            <p>Integrity, compassion, and commitment drive everything we do. We stand for truth and service to society.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:36px">
+          <a href="#programs" class="btn-primary">Explore Our Programs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     PROGRAMS / SERVICES
+═══════════════════════════════════════════════ -->
+<section class="section programs" id="programs" aria-labelledby="programs-title">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal">What We Do</span>
+    <h2 class="section-title reveal" id="programs-title">Our Programs &amp; Initiatives</h2>
+    <p class="section-body reveal">Comprehensive programs designed to empower individuals across all walks of life — from emotional wellness to financial literacy and entrepreneurship.</p>
+
+    <div class="programs-grid">
+      <div class="program-card pc-coral reveal" tabindex="0" role="article" aria-label="Emotional Wellness and Preventive Healthcare program">
+        <div class="program-card-bg pc-coral"></div>
+        <div class="program-card-content">
+          <h3>Emotional Wellness &amp; Preventive Healthcare</h3>
+          <div class="program-arrow" aria-hidden="true">&#8250;</div>
+        </div>
+      </div>
+
+      <div class="program-card pc-dark reveal" style="transition-delay:0.1s" tabindex="0" role="article" aria-label="Ignite program">
+        <div class="program-card-bg pc-dark"></div>
+        <div class="program-card-content">
+          <h3>Ignite</h3>
+          <div class="program-arrow" aria-hidden="true">&#8250;</div>
+        </div>
+      </div>
+
+      <div class="program-card pc-amber reveal" style="transition-delay:0.2s" tabindex="0" role="article" aria-label="Entrepreneurship program">
+        <div class="program-card-bg pc-amber"></div>
+        <div class="program-card-content">
+          <h3>Entrepreneurship</h3>
+          <div class="program-arrow" aria-hidden="true">&#8250;</div>
+        </div>
+      </div>
+
+      <div class="program-card pc-blue reveal" style="transition-delay:0.3s" tabindex="0" role="article" aria-label="Financial Literacy program">
+        <div class="program-card-bg pc-blue"></div>
+        <div class="program-card-content">
+          <h3>Financial Literacy</h3>
+          <div class="program-arrow" aria-hidden="true">&#8250;</div>
+        </div>
+      </div>
+
+      <div class="program-card pc-dark reveal" style="transition-delay:0.4s;background:linear-gradient(160deg,#222 0%,#000 100%)" tabindex="0" role="article" aria-label="Clean and Green India program">
+        <div class="program-card-bg" style="background:linear-gradient(160deg,#2a2a2a 0%,#111 100%)"></div>
+        <div class="program-card-content">
+          <h3>Clean &amp; Green India</h3>
+          <div class="program-arrow" aria-hidden="true">&#8250;</div>
+        </div>
+      </div>
+
+      <div class="program-card pc-teal reveal" style="transition-delay:0.5s" tabindex="0" role="article" aria-label="Love and Relationships program">
+        <div class="program-card-bg pc-teal"></div>
+        <div class="program-card-content">
+          <h3>Love &amp; Relationships</h3>
+          <div class="program-arrow" aria-hidden="true">&#8250;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     IMPACT BANNER
+═══════════════════════════════════════════════ -->
+<section class="impact-section" aria-label="Impact message">
+  <div class="impact-bg" aria-hidden="true"></div>
+  <div class="impact-content">
+    <p class="impact-eyebrow reveal">Help Other People</p>
+    <h2 class="impact-title reveal" style="transition-delay:0.15s">
+      "Our fingerprints on<br>the lives we touch<br>never fade."
+    </h2>
+    <div class="impact-actions reveal" style="transition-delay:0.3s">
+      <a href="#contact" class="btn-primary">Explore More</a>
+      <button class="btn-play" aria-label="Watch our story video" onclick="showToast('Video coming soon!')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     EVENTS
+═══════════════════════════════════════════════ -->
+<section class="section" id="events" aria-labelledby="events-title">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal">Our Events</span>
+    <h2 class="section-title reveal" id="events-title">Upcoming Events</h2>
+
+    <div class="events-grid">
+      <article class="event-card reveal">
+        <div class="event-header">
+          <div class="event-date-box">
+            <div class="day">25</div>
+            <div class="month">Jul</div>
+          </div>
+          <div>
+            <div class="event-tag">Education</div>
+            <h3 class="event-header-title">Education Career Fair</h3>
+          </div>
+        </div>
+        <div class="event-body">
+          <p>Education is the most powerful weapon which can be used to change the world. Join us for a transformative career fair.</p>
+          <div class="event-meta">
+            <span>📍 Chandigarh</span>
+            <span>🕐 10:00 AM</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card reveal" style="transition-delay:0.15s">
+        <div class="event-header" style="background:var(--coral)">
+          <div class="event-date-box">
+            <div class="day">12</div>
+            <div class="month">Aug</div>
+          </div>
+          <div>
+            <div class="event-tag" style="background:rgba(255,255,255,0.2);color:white">Wellness</div>
+            <h3 class="event-header-title">Emotional Wellness Workshop</h3>
+          </div>
+        </div>
+        <div class="event-body">
+          <p>A transformative workshop on emotional intelligence, preventive healthcare, and building resilience in daily life.</p>
+          <div class="event-meta">
+            <span>📍 Delhi</span>
+            <span>🕐 9:00 AM</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="event-card reveal" style="transition-delay:0.3s">
+        <div class="event-header" style="background:var(--teal)">
+          <div class="event-date-box">
+            <div class="day">05</div>
+            <div class="month">Sep</div>
+          </div>
+          <div>
+            <div class="event-tag" style="background:rgba(255,255,255,0.2);color:white">Finance</div>
+            <h3 class="event-header-title">Financial Literacy Seminar</h3>
+          </div>
+        </div>
+        <div class="event-body">
+          <p>Empowering youth and families with practical financial knowledge to secure their economic future and build wealth.</p>
+          <div class="event-meta">
+            <span>📍 Mumbai</span>
+            <span>🕐 11:00 AM</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════ -->
+<section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal">Our Testimonials</span>
+    <h2 class="section-title reveal" id="testimonials-title">What They Are Talking<br>About Disha For India</h2>
+
+    <div class="testimonials-slider" aria-label="Testimonials slider">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">&#8220;</div>
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial-text">"Disha For India Foundation changed my perspective on life. The emotional wellness program helped me find clarity and purpose. I am now living a truly beautiful life as they promised."</p>
+          <div class="testimonial-author">
+            <div class="avatar-initials" aria-hidden="true">PR</div>
+            <div>
+              <div class="testimonial-name">Priya Sharma</div>
+              <div class="testimonial-role">Program Participant, Delhi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">&#8220;</div>
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial-text">"The Ignite program transformed how I approach education. It sparked a fire in me to not just study but to truly learn and grow. Disha For India Foundation and Educational Trust is doing incredible work."</p>
+          <div class="testimonial-author">
+            <div class="avatar-initials" aria-hidden="true">AK</div>
+            <div>
+              <div class="testimonial-name">Amit Kumar</div>
+              <div class="testimonial-role">Student, Chandigarh</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">&#8220;</div>
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial-text">"Financial literacy workshop by Disha completely changed how our family manages money. We have saved and invested more in the past year than in the previous decade combined."</p>
+          <div class="testimonial-author">
+            <div class="avatar-initials" aria-hidden="true">SM</div>
+            <div>
+              <div class="testimonial-name">Sunita Mehta</div>
+              <div class="testimonial-role">Homemaker &amp; Entrepreneur</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">&#8220;</div>
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial-text">"I attended the Entrepreneurship program and within six months launched my own startup. Disha gave me not just skills, but the confidence and community to make it happen."</p>
+          <div class="testimonial-author">
+            <div class="avatar-initials" aria-hidden="true">RG</div>
+            <div>
+              <div class="testimonial-name">Rahul Gupta</div>
+              <div class="testimonial-role">Startup Founder, Pune</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">&#8220;</div>
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial-text">"Their approach to Love &amp; Relationships workshop was eye-opening. Learning to connect with awareness and without fear has transformed my personal and professional relationships."</p>
+          <div class="testimonial-author">
+            <div class="avatar-initials" aria-hidden="true">NJ</div>
+            <div>
+              <div class="testimonial-name">Neha Jain</div>
+              <div class="testimonial-role">Counsellor, Mumbai</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="slider-btn" id="sliderPrev" aria-label="Previous testimonial">&#8249;</button>
+      <div class="slider-dots" role="tablist" aria-label="Testimonial navigation">
+        <div class="slider-dot active" data-idx="0" role="tab" aria-selected="true" aria-label="Slide 1" tabindex="0"></div>
+        <div class="slider-dot" data-idx="1" role="tab" aria-selected="false" aria-label="Slide 2" tabindex="0"></div>
+        <div class="slider-dot" data-idx="2" role="tab" aria-selected="false" aria-label="Slide 3" tabindex="0"></div>
+      </div>
+      <button class="slider-btn" id="sliderNext" aria-label="Next testimonial">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GALLERY
+═══════════════════════════════════════════════ -->
+<section class="section" id="gallery" aria-labelledby="gallery-title">
+  <div class="section-inner">
+    <h2 class="section-title reveal" id="gallery-title" style="text-align:center">Photo Gallery</h2>
+    <p class="section-body reveal" style="text-align:center;margin:0 auto 0">Glimpses of our impactful events, workshops, and community initiatives across India.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal-left" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&auto=format&fit=crop" alt="Disha For India event — panel discussion on stage" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.1s" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&auto=format&fit=crop" alt="Community empowerment workshop" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.2s" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=500&auto=format&fit=crop" alt="Educational seminar for students" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
+      </div>
+      <div class="gallery-item reveal-right" style="transition-delay:0.15s" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=500&auto=format&fit=crop" alt="Career fair and networking event" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
+      </div>
+      <div class="gallery-item reveal-right" style="transition-delay:0.25s" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&auto=format&fit=crop" alt="Youth entrepreneurship workshop" loading="lazy" />
+        <div class="gallery-overlay"><div class="gallery-plus">+</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     PARTNERS
+═══════════════════════════════════════════════ -->
+<section class="partners" aria-label="Our partners and collaborators">
+  <div class="partners-inner">
+    <p class="partners-title reveal">Trusted Partners &amp; Collaborators</p>
+    <div class="partners-logos">
+      <div class="partner-logo reveal">Haryana Tourism</div>
+      <div class="partner-logo reveal" style="transition-delay:0.1s">Lifestyle</div>
+      <div class="partner-logo reveal" style="transition-delay:0.2s">Dainik Bhaskar</div>
+      <div class="partner-logo reveal" style="transition-delay:0.3s">Raabta</div>
+      <div class="partner-logo reveal" style="transition-delay:0.4s">Tagore Theater</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════ -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal" style="display:block;text-align:center">Common Questions</span>
+    <h2 class="section-title reveal" id="faq-title" style="text-align:center">Frequently Asked Questions</h2>
+
+    <div class="faq-list" role="list">
+      <div class="faq-item reveal" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          What is Disha For India Foundation?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Disha For India Foundation and Educational Trust is a non-profit organization committed to empowering individuals and communities through education, emotional wellness, financial literacy, entrepreneurship, and environmental awareness. We believe in transforming empowered selves into an empowered society.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.1s" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How can I participate in your programs?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>You can participate by contacting us through the form below, calling our helpline at +91-9888877722, or emailing us at inaggarwal76@gmail.com. We regularly organize events, workshops, and seminars across major cities in India. Follow our social media for upcoming event announcements.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.2s" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Are your programs free of charge?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Many of our community programs are free or offered at a nominal fee to ensure maximum accessibility. Some specialized workshops and certification programs may have a fee structure. Please contact us for specific program details and any available scholarships or subsidies.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.3s" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How can I support or donate to Disha For India?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>You can create an impact by donating to our foundation, volunteering your time and skills, partnering with us as an organization, or spreading our mission in your community. Click the "Create an Impact" button or contact us directly to explore how you can contribute to this meaningful cause.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" style="transition-delay:0.4s" role="listitem">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          In which cities do you operate?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Disha For India operates across multiple cities including Chandigarh, Delhi, Mumbai, Pune, and other major Indian cities. We also conduct virtual programs to reach participants nationwide. Our events have been hosted at prestigious venues including Tagore Theater, Chandigarh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════ -->
+<section class="section" id="contact" style="background:var(--off)" aria-labelledby="contact-title">
+  <div class="section-inner">
+    <span class="section-eyebrow reveal">Get In Touch</span>
+    <h2 class="section-title reveal" id="contact-title">Create An Impact With Us</h2>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <h3>Let's Connect &amp; Empower Together</h3>
+        <p>Whether you want to join a program, partner with us, volunteer, or simply learn more about our work — we'd love to hear from you.</p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📞</div>
+            <div class="contact-item-text">
+              <div class="label">Phone</div>
+              <a href="tel:+919888877722" class="value">+91-9888877722</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">✉️</div>
+            <div class="contact-item-text">
+              <div class="label">Email</div>
+              <a href="mailto:inaggarwal76@gmail.com" class="value">inaggarwal76@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">🌐</div>
+            <div class="contact-item-text">
+              <div class="label">Website</div>
+              <span class="value">www.dishaforindia.org</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div class="contact-item-text">
+              <div class="label">Location</div>
+              <span class="value">Chandigarh, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:32px">
+          <p style="font-size:0.82rem;font-weight:600;color:var(--dark);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px">Follow Us</p>
+          <div class="mobile-social" style="margin-top:0">
+            <a href="#" aria-label="Twitter" class="social-btn">🐦</a>
+            <a href="#" aria-label="Facebook" class="social-btn">📘</a>
+            <a href="#" aria-label="Pinterest" class="social-btn">📌</a>
+            <a href="#" aria-label="Instagram" class="social-btn">📷</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal-right">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your first name" autocomplete="given-name" />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your last name" autocomplete="family-name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="interest">Area of Interest</label>
+          <select id="interest" name="interest">
+            <option value="">Select a program</option>
+            <option>Emotional Wellness &amp; Healthcare</option>
+            <option>Ignite — Education Empowerment</option>
+            <option>Entrepreneurship</option>
+            <option>Financial Literacy</option>
+            <option>Clean &amp; Green India</option>
+            <option>Love &amp; Relationships</option>
+            <option>Volunteer / Partnership</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us how you'd like to create an impact..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleFormSubmit(event)">Send Message ✦</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">
+        <svg class="logo-svg-white" width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="20"/>
+          <path d="M16 14 L16 34 L26 34 Q34 34 34 24 Q34 14 26 14 Z M20 18 L25 18 Q30 18 30 24 Q30 30 25 30 L20 30 Z"/>
+        </svg>
+        <div>
+          <div class="footer-brand-name">Disha for India</div>
+          <div class="footer-brand-sub">Empowered Self to Empowered Society</div>
+        </div>
+      </div>
+      <p>Education is the most powerful weapon which can be used to change the world. Disha For India Foundation and Educational Trust is committed to making that change, one life at a time.</p>
+      <div class="footer-contact-list">
+        <a href="tel:+919888877722">📞 +91-9888877722</a>
+        <a href="mailto:inaggarwal76@gmail.com">✉ inaggarwal76@gmail.com</a>
+        <a href="#">🌐 www.dishaforindia.org</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-btn" aria-label="Twitter">🐦</a>
+        <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+        <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+        <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Who We Are</h4>
+      <nav class="footer-links" aria-label="About links">
+        <a href="#about">Vision &amp; Mission</a>
+        <a href="#about">Core Values</a>
+        <a href="#about">Our Blogs</a>
+        <a href="#about">Our Team</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </div>
+
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <nav class="footer-links" aria-label="Programs links">
+        <a href="#programs">Ignite</a>
+        <a href="#programs">Wellness</a>
+        <a href="#programs">Financial Literacy</a>
+        <a href="#programs">Entrepreneurship</a>
+        <a href="#programs">Clean &amp; Green India</a>
+      </nav>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <nav class="footer-links" aria-label="Quick links">
+        <a href="#events">Upcoming Events</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#contact">Create an Impact</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Disha For India Foundation and Educational Trust. All rights reserved.</p>
+    <p>Made with ❤️ for a better India</p>
+  </div>
+</footer>
+
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">&#215;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════ -->
+<script src="1.js" defer></script>
+
+</body>
+</html>
