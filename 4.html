@@ -159,9 +159,147 @@
 
 <hr class="divider"/>
 
-<!-- SECTION 2: LIVE METRICS -->
+<!-- SECTION 2: IMPACT MAP -->
 <div class="section">
   <div class="section-label">Section 4.2</div>
+  <h2 class="section-title">India Impact Map</h2>
+  <p class="section-sub">Visualizing our footprint. Click on any city hotspot on the interactive map to see active volunteers, live hours contributed, and local impact stories.</p>
+
+  <div class="map-dashboard-grid">
+    <!-- Map Box (Left Panel) -->
+    <div class="map-box glass-panel" style="background: var(--off); border: 1px solid rgba(232, 160, 32, 0.08); padding: 24px;">
+      <!-- Map Legend -->
+      <div class="map-legend">
+        <div class="legend-item"><span class="legend-dot active-chapter"></span>Active Chapter</div>
+        <div class="legend-item"><span class="legend-dot growing-hub"></span>Growing Hub</div>
+      </div>
+      
+      <svg class="india-svg" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(232, 160, 32, 0.04)" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        
+        <!-- Polygonal Border of India -->
+        <path class="india-border" d="
+          M 230 80 L 250 80 L 260 90 L 270 90 L 275 110 L 265 130 L 285 140 L 310 140 L 330 160 L 340 180 L 360 180 L 370 190
+          L 380 200 L 400 200 L 415 190 L 420 200 L 410 215 L 430 220 L 440 210 L 450 215 L 450 230 L 440 240 L 440 250
+          L 455 255 L 450 270 L 435 270 L 425 285 L 400 290 L 380 300 L 365 315 L 345 320 L 325 330 L 325 345 L 340 360
+          L 335 380 L 345 390 L 365 390 L 380 405 L 390 420 L 380 435 L 350 440 L 325 450 L 305 470 L 290 490 L 275 520
+          L 265 540 L 260 565 L 250 590 L 240 615 L 235 635 L 230 650 L 225 660 L 220 650 L 210 625 L 205 595 L 200 565
+          L 190 535 L 180 515 L 175 490 L 165 470 L 155 450 L 140 435 L 130 425 L 135 410 L 130 395 L 140 380 L 125 365
+          L 115 370 L 105 380 L 95 380 L 85 365 L 80 345 L 90 330 L 105 325 L 115 310 L 110 295 L 95 285 L 85 290
+          L 80 280 L 95 265 L 115 265 L 125 250 L 140 245 L 155 230 L 170 230 L 180 215 L 195 220 L 205 205 L 215 210
+          L 220 195 L 215 175 L 230 165 L 235 145 L 230 130 L 240 115 L 235 100 L 230 90 Z
+        " />
+        
+        <!-- Interactive hotspots -->
+        <g class="map-marker" id="marker-saharanpur" onclick="selectCity('saharanpur')" transform="translate(248, 172)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" style="fill: var(--coral);" />
+          <text class="marker-label" y="-12" text-anchor="middle">Saharanpur</text>
+        </g>
+        <g class="map-marker" id="marker-delhi" onclick="selectCity('delhi')" transform="translate(240, 210)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" />
+          <text class="marker-label" y="-12" text-anchor="middle">Delhi</text>
+        </g>
+        <g class="map-marker" id="marker-noida" onclick="selectCity('noida')" transform="translate(258, 222)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" />
+          <text class="marker-label" y="-12" text-anchor="middle">Noida</text>
+        </g>
+        <g class="map-marker" id="marker-ghaziabad" onclick="selectCity('ghaziabad')" transform="translate(268, 206)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" />
+          <text class="marker-label" y="-12" text-anchor="middle">Ghaziabad</text>
+        </g>
+        <g class="map-marker" id="marker-jaipur" onclick="selectCity('jaipur')" transform="translate(170, 240)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" />
+          <text class="marker-label" y="-12" text-anchor="middle">Jaipur</text>
+        </g>
+        <g class="map-marker" id="marker-lucknow" onclick="selectCity('lucknow')" transform="translate(310, 240)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" />
+          <text class="marker-label" y="-12" text-anchor="middle">Lucknow</text>
+        </g>
+        <g class="map-marker" id="marker-mumbai" onclick="selectCity('mumbai')" transform="translate(150, 420)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" />
+          <text class="marker-label" y="-12" text-anchor="middle">Mumbai</text>
+        </g>
+        <g class="map-marker" id="marker-bengaluru" onclick="selectCity('bengaluru')" transform="translate(220, 560)">
+          <circle class="marker-glow" r="16" />
+          <circle class="marker-core" r="6" />
+          <text class="marker-label" y="-12" text-anchor="middle">Bengaluru</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Impact Dashboard (Right Panel) -->
+    <div class="glass-panel impact-panel">
+      <div class="city-header-area">
+        <span class="city-subtitle" id="dashRegion">Region</span>
+        <h3 class="city-title" id="dashCityName">City Name</h3>
+      </div>
+      
+      <!-- City Stats Grid -->
+      <div class="city-stats-grid">
+        <div class="city-stat-card">
+          <span class="val" id="statVolunteers">0</span>
+          <span class="lbl">Volunteers Active</span>
+        </div>
+        <div class="city-stat-card">
+          <span class="val" id="statEvents">0</span>
+          <span class="lbl">Events Conducted</span>
+        </div>
+        <div class="city-stat-card">
+          <span class="val" id="statHours">0</span>
+          <span class="lbl">Hours Contributed</span>
+        </div>
+        <div class="city-stat-card">
+          <span class="val" id="statStudents">0</span>
+          <span class="lbl">Students Reached</span>
+        </div>
+      </div>
+      
+      <div class="city-stat-card" style="grid-column: span 2; display: flex; flex-direction: row; justify-content: space-between; align-items: center; background: rgba(232, 160, 32, 0.05); border: 1px solid rgba(232, 160, 32, 0.15);">
+        <div>
+          <span class="lbl" style="display: block; margin-bottom: 2px;">Total DSC Coins Earned</span>
+          <span class="val" id="statDSC" style="color: var(--amber);">0 DSC</span>
+        </div>
+        <span style="font-size: 2rem;">🪙</span>
+      </div>
+
+      <!-- Stories Behind the Impact -->
+      <div class="story-card">
+        <div class="story-image-placeholder" id="storyImage" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&auto=format&fit=crop');">
+          <span class="story-tag" id="storyTag">Featured Story</span>
+        </div>
+        <div class="story-body">
+          <div class="story-date" id="storyDate">Date</div>
+          <p class="story-text" id="storyText">Story text goes here.</p>
+          <div class="story-author">
+            <div class="story-author-avatar" id="storyAuthorAvatar">SG</div>
+            <div>
+              <div class="story-author-name" id="storyAuthorName">Volunteer Name</div>
+              <div class="story-subtitle" style="font-size: 0.6rem; letter-spacing: 0.05em;" id="storyAuthorTitle">Lead Organizer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- SECTION 3: LIVE METRICS -->
+<div class="section">
+  <div class="section-label">Section 4.3</div>
   <h2 class="section-title">Ecosystem Live Metrics</h2>
   <p class="section-sub">Aggregated network metrics showing the combined scale of volunteering driven by our community.</p>
 
@@ -187,12 +325,12 @@
 
 <hr class="divider"/>
 
-<!-- SECTION 3: STUDENT CTA -->
+<!-- SECTION 4: STUDENT CTA -->
 <div class="section">
   <div class="section-inner cta-banner">
     <h2>Want to build your own verifiable impact profile?</h2>
     <p>Become a volunteer today. Develop in-demand skills, build real projects, unlock premium course discounts, and get featured on our Wall of Fame to stand out to global recruiters.</p>
-    <a href="1.html#contact" class="cta-btn">Join as a Volunteer Today ➔</a>
+    <a href="index.html#contact" class="cta-btn">Join as a Volunteer Today ➔</a>
   </div>
 </div>
 
