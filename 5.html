@@ -206,6 +206,22 @@
         </div>
       </div>
 
+      <div class="form-row">
+        <div class="form-group">
+          <label for="formPhone">Phone Number</label>
+          <input type="tel" id="formPhone" placeholder="+91 00000 00000" required />
+        </div>
+        <div class="form-group">
+          <label for="formCity">City</label>
+          <input type="text" id="formCity" placeholder="e.g. Saharanpur" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="formSkills">Skills / Areas of Expertise</label>
+        <input type="text" id="formSkills" placeholder="e.g. Web Development, Graphic Design, Writing" required />
+      </div>
+
       <div class="form-group">
         <label for="formCollege">College / University Name</label>
         <input type="text" id="formCollege" placeholder="e.g. Delhi University" required />
@@ -216,7 +232,7 @@
         <textarea id="formStatement" rows="4" placeholder="Briefly describe your interest or past experience..." required></textarea>
       </div>
 
-      <button type="submit" class="submit-btn">Submit Application</button>
+      <button type="submit" class="submit-btn" id="submitBtn">Submit Application</button>
     </form>
   </div>
 </div>
@@ -224,9 +240,9 @@
 <!-- SUCCESS RECEIPT MODAL -->
 <div class="modal-overlay" id="successModal" aria-hidden="true">
   <div class="modal-card success-card" role="dialog" aria-modal="true">
-    <div class="success-icon">✅</div>
-    <h3>Application Submitted!</h3>
-    <p class="success-msg">Your details have been registered. A Disha chapter coordinator will review your profile and reach out within 3 business days.</p>
+    <div class="success-icon">🎉</div>
+    <h3>Registration Successful!</h3>
+    <p class="success-msg">Thank you for joining DISHA For Life. A confirmation email has been sent to your inbox. Our team will contact you soon regarding volunteer opportunities.</p>
     
     <div class="receipt-box">
       <div class="receipt-title">🎫 Application Receipt</div>

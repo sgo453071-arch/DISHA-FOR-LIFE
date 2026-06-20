@@ -1,3 +1,7 @@
+// REPLACE WITH YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL
+// Example: "https://script.google.com/macros/s/AKfycby.../exec"
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwTUb2oJKnRJKGAiFoacQTNFcWkFOkQNBA-6dOICZ3iE8N5HFmhMlTAaDHjvt_AqE8wzg/exec"; 
+
 function openApplyModal(programName, rolesList) {
   const modal = document.getElementById('applyModal');
   const programInput = document.getElementById('formProgram');
@@ -33,17 +37,78 @@ function handleApplySubmit(event) {
   const program = document.getElementById('formProgram').value;
   const role = document.getElementById('formRole').value;
   const name = document.getElementById('formName').value;
+  const email = document.getElementById('formEmail').value;
+  const phone = document.getElementById('formPhone').value;
+  const city = document.getElementById('formCity').value;
+  const skills = document.getElementById('formSkills').value;
   const college = document.getElementById('formCollege').value;
+  const message = document.getElementById('formStatement').value;
   
-  // Close application form modal
-  closeApplyModal();
+  const submitBtn = document.getElementById('submitBtn');
+  const originalBtnText = submitBtn.textContent;
   
-  // Show successful submission receipt modal
+  // Show loading state
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submitting Application...";
+  
+  // Prepare payload matching Google Sheets columns
+  const payload = {
+    name: name,
+    email: email,
+    phone: phone,
+    city: city,
+    skills: skills,
+    college: college,
+    role: `${program} - ${role}`,
+    message: message
+  };
+  
+  if (!APPS_SCRIPT_URL) {
+    // Local fallback if Web App URL is not set yet
+    console.log("No Apps Script URL configured. Simulating registration locally:", payload);
+    setTimeout(() => {
+      completeSubmission(program, role, name, college);
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    }, 1200);
+    return;
+  }
+  
+  // Post data to Google Apps Script Web App
+  // Mode 'no-cors' is used to bypass browser CORS checks on static hosting
+  fetch(APPS_SCRIPT_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "text/plain"
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(() => {
+    // Because no-cors returns an opaque response, we assume success
+    completeSubmission(program, role, name, college);
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
+  })
+  .catch(error => {
+    console.error("Volunteer submission error:", error);
+    showToast("⚠️ Submission failed. Please check your network and try again.");
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
+  });
+}
+
+function completeSubmission(program, role, name, college) {
+  // Populate receipt details
   document.getElementById('receiptProgram').textContent = program;
   document.getElementById('receiptRole').textContent = role;
   document.getElementById('receiptName').textContent = name;
   document.getElementById('receiptCollege').textContent = college;
   
+  // Close application form modal
+  closeApplyModal();
+  
+  // Show success receipt modal
   const successModal = document.getElementById('successModal');
   successModal.classList.add('open');
   successModal.setAttribute('aria-hidden', 'false');
