@@ -1616,20 +1616,23 @@
        ECOSYSTEM DOCUMENTATION SECTION
     ─────────────────────────────────────────────── */
     .ecosystem-docs {
-      padding: 100px 40px;
+      padding: 80px 20px;
       background: var(--off);
       position: relative;
     }
+    .ecosystem-docs .section-inner {
+      max-width: 96%;
+    }
     .docs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
       margin-top: 40px;
     }
     .docs-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 40px 32px;
+      padding: 32px 24px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
       border: 1px solid rgba(0, 0, 0, 0.05);
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
@@ -1640,8 +1643,8 @@
     .docs-card-header {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
+      gap: 12px;
+      margin-bottom: 20px;
     }
     .docs-icon {
       font-size: 2.25rem;
