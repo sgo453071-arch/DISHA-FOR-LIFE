@@ -16,7 +16,7 @@
 ═══════════════════════════════════════════════ -->
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <a href="#" class="nav-logo" aria-label="Disha For India Home">
-    <svg class="nav-logo-icon logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <svg class="nav-logo-icon logo-svg" width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <circle cx="24" cy="24" r="20"/>
       <path d="M16 14 L16 34 L26 34 Q34 34 34 24 Q34 14 26 14 Z M20 18 L25 18 Q30 18 30 24 Q30 30 25 30 L20 30 Z"/>
     </svg>
@@ -28,6 +28,7 @@
 
   <ul class="nav-links" role="list">
     <li><a href="#hero">Home</a></li>
+
     <li class="nav-dropdown">
       <a href="#about">About Us</a>
       <ul class="dropdown-menu" role="list">
@@ -37,6 +38,7 @@
         <li><a href="#about">Our Blogs</a></li>
       </ul>
     </li>
+
     <li class="nav-dropdown">
       <a href="#events">Events</a>
       <ul class="dropdown-menu" role="list">
@@ -45,12 +47,21 @@
         <li><a href="#events">Past Events</a></li>
       </ul>
     </li>
+
     <li><a href="#programs">Programs</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="2.html">Token Economy</a></li>
-    <li><a href="3.html">Refer &amp; Earn</a></li>
-    <li><a href="4.html">Proof of Impact</a></li>
-    <li><a href="5.html">Active Programs</a></li>
+
+    <!-- ✨ NEW: VOLUNTEER HUB (merges Testimonials + 4 ecosystem pages) -->
+    <li class="nav-dropdown">
+      <a href="2.html">Volunteer Hub</a>
+      <ul class="dropdown-menu" role="list">
+        <li><a href="2.html">🪙 Token Economy</a></li>
+        <li><a href="3.html">📣 Refer &amp; Earn</a></li>
+        <li><a href="4.html">🏆 Proof of Impact</a></li>
+        <li><a href="5.html">🚀 Active Programs</a></li>
+        <li><a href="#testimonials">⭐ Testimonials</a></li>
+      </ul>
+    </li>
+
     <li><a href="#contact">Contact Us</a></li>
     <li><a href="#contact" class="nav-cta">Create an Impact</a></li>
   </ul>
@@ -61,11 +72,10 @@
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
   <div class="mobile-menu-header">
     <a href="#" class="nav-logo">
-      <svg class="nav-logo-icon logo-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg class="nav-logo-icon logo-svg" width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="24" cy="24" r="20"/>
         <path d="M16 14 L16 34 L26 34 Q34 34 34 24 Q34 14 26 14 Z M20 18 L25 18 Q30 18 30 24 Q30 30 25 30 L20 30 Z"/>
       </svg>
@@ -81,6 +91,7 @@
     <li class="mobile-nav-item">
       <a href="#hero" class="mobile-nav-link">Home</a>
     </li>
+
     <li class="mobile-nav-item">
       <div class="mobile-nav-link" onclick="toggleMobileSub(this)">
         About Us
@@ -93,6 +104,7 @@
         <a href="#about">Our Blogs</a>
       </div>
     </li>
+
     <li class="mobile-nav-item">
       <div class="mobile-nav-link" onclick="toggleMobileSub(this)">
         Events
@@ -104,12 +116,26 @@
         <a href="#events">Past Events</a>
       </div>
     </li>
+
     <li class="mobile-nav-item">
       <a href="#programs" class="mobile-nav-link">Programs</a>
     </li>
+
+    <!-- ✨ NEW: VOLUNTEER HUB on mobile -->
     <li class="mobile-nav-item">
-      <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+      <div class="mobile-nav-link" onclick="toggleMobileSub(this)">
+        Volunteer Hub
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="mobile-sub-menu">
+        <a href="2.html">🪙 Token Economy</a>
+        <a href="3.html">📣 Refer &amp; Earn</a>
+        <a href="4.html">🏆 Proof of Impact</a>
+        <a href="5.html">🚀 Active Programs</a>
+        <a href="#testimonials">⭐ Testimonials</a>
+      </div>
     </li>
+
     <li class="mobile-nav-item">
       <div class="mobile-nav-link" onclick="toggleMobileSub(this)">
         News
@@ -120,18 +146,7 @@
         <a href="#">Press Coverage</a>
       </div>
     </li>
-    <li class="mobile-nav-item">
-      <a href="2.html" class="mobile-nav-link">Token Economy</a>
-    </li>
-    <li class="mobile-nav-item">
-      <a href="3.html" class="mobile-nav-link">Refer &amp; Earn</a>
-    </li>
-    <li class="mobile-nav-item">
-      <a href="4.html" class="mobile-nav-link">Proof of Impact</a>
-    </li>
-    <li class="mobile-nav-item">
-      <a href="5.html" class="mobile-nav-link">Active Programs</a>
-    </li>
+
     <li class="mobile-nav-item">
       <a href="#contact" class="mobile-nav-link">Contact Us</a>
     </li>
