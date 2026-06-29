@@ -1,541 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Economy & Tokenomics Architecture — Disha × TalentGro</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="2.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Earn DiSha Coins by volunteering on Disha and redeem them for career development courses, mentorship, and internships on TalentGro Global." />
+  <title>Token Economy — Disha For India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="2.css" />
 </head>
 <body>
 
-<div class="topbar">
-  <span class="topbar-brand">📐 Blueprint File 01 — Tokenomics</span>
-  <nav class="topbar-nav">
-    <a href="index.html">Home</a>
-    <a href="2.html" class="active">Token Economy</a>
-    <a href="3.html">Refer &amp; Earn</a>
-    <a href="4.html">Proof of Impact</a>
-    <a href="5.html">Active Programs</a>
-  </nav>
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Disha For India Home">
+    <svg class="nav-logo-icon logo-svg" width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="24" cy="24" r="20"/>
+      <path d="M16 14 L16 34 L26 34 Q34 34 34 24 Q34 14 26 14 Z M20 18 L25 18 Q30 18 30 24 Q30 30 25 30 L20 30 Z"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Disha for India</span>
+      <span class="nav-logo-tagline">Empowered Self to Empowered Society</span>
+    </div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="2.html" class="active">Token Economy</a></li>
+    <li><a href="3.html">Refer &amp; Earn</a></li>
+    <li><a href="4.html">Proof of Impact</a></li>
+    <li><a href="5.html">Active Programs</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Create an Impact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mobile-menu-header">
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-logo-icon logo-svg" width="36" height="36" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="24" r="20"/>
+        <path d="M16 14 L16 34 L26 34 Q34 34 34 24 Q34 14 26 14 Z M20 18 L25 18 Q30 18 30 24 Q30 30 25 30 L20 30 Z"/>
+      </svg>
+      <span class="nav-logo-name">Disha for India</span>
+    </a>
+    <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">&#215;</button>
+  </div>
+  <ul role="list">
+    <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+    <li class="mobile-nav-item"><a href="2.html" class="mobile-nav-link active">Token Economy</a></li>
+    <li class="mobile-nav-item"><a href="3.html" class="mobile-nav-link">Refer &amp; Earn</a></li>
+    <li class="mobile-nav-item"><a href="4.html" class="mobile-nav-link">Proof of Impact</a></li>
+    <li class="mobile-nav-item"><a href="5.html" class="mobile-nav-link">Active Programs</a></li>
+    <li class="mobile-nav-item"><a href="index.html#contact" class="mobile-nav-link">Contact Us</a></li>
+  </ul>
 </div>
 
-<div class="hero">
-  <div class="hero-badge"><span class="dot"></span>Blueprint Document 01 of 04</div>
-  <h1>Economy & <span>Tokenomics</span><br>Architecture</h1>
-  <p>The complete currency design, earning matrix, redemption rules, tier system, and economic guardrails for the Disha × TalentGro Global ecosystem.</p>
-  <div class="pill-row">
-    <span class="pill pill-disha">🤝 Disha — Earn</span>
-    <span class="pill pill-coin">🪙 DiSha Coins</span>
-    <span class="pill pill-talent">🎓 TalentGro — Redeem</span>
-  </div>
-</div>
-
-<!-- ═══ SECTION 1: CURRENCY ═══ -->
-<div class="section">
-  <div class="section-label">Section 1.1</div>
-  <h2 class="section-title">Core Currency Definition</h2>
-  <p class="section-sub">A single, unified token bridges both platforms — earned through impact on Disha, spent on growth at TalentGro Global.</p>
-
-  <div class="intro-description-box" style="margin: 24px 0; padding: 24px; background: rgba(50,48,160,0.1); border-left: 3px solid var(--talent); border-radius: var(--r);">
-    <h3 style="font-family:var(--mono); font-size:1rem; margin-bottom:8px; color:var(--gold);">About TalentGro Global</h3>
-    <p style="font-size:0.88rem; line-height:1.6; color:var(--text);">
-      TalentGro Global is an education and career development platform that helps students and professionals build skills, gain practical experience, and improve their career opportunities. The company provides AI-based career counseling, career assessments, skill development courses, internships with live projects, mentorship from industry experts, placement assistance, resume-building tools, and job portal access. It also works with colleges, universities, and organizations by offering faculty development programs, AI upskilling, placement training, and career mapping solutions. Its main goal is to bridge the gap between learning and employment by helping individuals become job-ready through real-world training and career guidance.
-    </p>
-  </div>
-
-  <div class="currency-showcase">
-    <div class="coin-card">
-      <div class="coin-symbol">🪙</div>
-      <div class="coin-name">DSC</div>
-      <div class="coin-full">DiSha Coin — The Ecosystem Token</div>
-      <div class="coin-stat"><span class="val">1</span><span class="unit">DSC</span></div>
-      <div class="coin-desc" style="margin-top:8px">The primary cross-platform currency. Earned on Disha for every verified volunteer action. Redeemable on TalentGro Global for skill development courses, AI-based career counseling, career assessments, resume-building tools, internships, and job portal access. Non-transferable. Expires after 18 months of account inactivity.</div>
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="tok-hero" aria-label="Token Economy hero">
+  <div class="tok-hero-bg" aria-hidden="true"></div>
+  <div class="tok-hero-content">
+    <span class="section-eyebrow" style="color:var(--amber);">🪙 Volunteer Hub</span>
+    <h1 class="tok-hero-title">Token Economy</h1>
+    <p class="tok-hero-sub">Earn DiSha Coins by making a difference. Spend them on courses, career guidance, and real career tools on TalentGro Global.</p>
+    <div class="tok-pill-row">
+      <span class="tok-pill tok-pill-coral">🤝 Volunteer on Disha → Earn</span>
+      <span class="tok-pill tok-pill-amber">🪙 DiSha Coins</span>
+      <span class="tok-pill tok-pill-teal">🎓 Redeem on TalentGro → Grow</span>
     </div>
-    <div class="coin-card">
-      <div class="coin-symbol">💎</div>
-      <div class="coin-name">DSC-P</div>
-      <div class="coin-full">DiSha Premium — Prestige Token</div>
-      <div class="coin-stat"><span class="val">1</span><span class="unit">DSC-P = 5 DSC</span></div>
-      <div class="coin-desc" style="margin-top:8px">Awarded only for high-impact actions: flagship events, verified open-source contributions, or mentorship completion. Unlocks exclusive TalentGro benefits (mentorship from industry experts, placement assistance, faculty development programs, and live projects) that DSC alone cannot access.</div>
+    <div style="margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <a href="#earning" class="btn-primary">How to Earn →</a>
+      <a href="#redeem" class="btn-secondary">What Can I Get?</a>
     </div>
   </div>
+</section>
 
-  <div class="conversion-box">
-    <div class="conv-side">
-      <div class="platform" style="color:#FF7070">🤝 DISHA</div>
-      <div class="amount" style="color:var(--gold)">100 DSC</div>
-      <div class="label">earned through contribution</div>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT TALENTGRO BAND
+═══════════════════════════════════════════════ -->
+<section class="tok-band" aria-label="About TalentGro">
+  <div class="tok-band-inner">
+    <div class="tok-band-text">
+      <span class="section-eyebrow">Powered By</span>
+      <h2 class="section-title" style="margin-bottom:16px;">What is TalentGro Global?</h2>
+      <p class="section-body">TalentGro Global is a career and education platform that helps students and professionals go from learning to earning. Think AI-powered career counseling, skill courses, live internships, mock interviews, resume tools, and expert mentorship — all in one place. When you volunteer on Disha, your coins unlock these opportunities for free.</p>
     </div>
-    <div class="conv-arrow">⇄</div>
-    <div class="conv-side">
-      <div class="platform" style="color:#8080FF">🎓 TALENTGRO</div>
-      <div class="amount" style="color:var(--green)">₹50</div>
-      <div class="label">discount value at redemption</div>
-    </div>
-  </div>
-
-  <div class="formula">
-    Base Rate: 100 DSC = ₹50<br>
-    DSC-P Rate: 1 DSC-P = 5× base value = ₹2.50 per DSC-P<br>
-    Max Wallet Discount: 30% of any single course price<br>
-    Min Redemption: 200 DSC per transaction<br>
-    Validity: 18 months from last platform activity
-  </div>
-</div>
-
-<hr class="divider"/>
-
-<!-- ═══ SECTION 2: EARNING MATRIX ═══ -->
-<div class="section">
-  <div class="section-label">Section 1.2</div>
-  <h2 class="section-title">Earning Matrix — Disha Platform</h2>
-  <p class="section-sub">Every action is verified before coins are credited. Verification tier prevents gaming the system. All values are per single verified instance.</p>
-
-  <div class="tbl-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Activity</th>
-          <th>DSC Earned</th>
-          <th>DSC-P</th>
-          <th>Verification</th>
-          <th>Max/Month</th>
-          <th>Difficulty</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- CONTENT -->
-        <tr><td colspan="7" style="background:rgba(245,166,35,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--gold);padding:10px 16px">✍️ CONTENT CREATION</td></tr>
-        <tr>
-          <td rowspan="5">Content</td>
-          <td>Short article / blog post (500–900 words)</td>
-          <td><span class="badge badge-green">+50 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-amber">Editor Review</span></td>
-          <td>4×</td>
-          <td>Low</td>
-        </tr>
-        <tr>
-          <td>Long-form research article (900–2000 words)</td>
-          <td><span class="badge badge-green">+120 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-amber">Editor Review</span></td>
-          <td>2×</td>
-          <td>Medium</td>
-        </tr>
-        <tr>
-          <td>Case study / impact report</td>
-          <td><span class="badge badge-green">+200 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-amber">Admin Verified</span></td>
-          <td>1×</td>
-          <td>High</td>
-        </tr>
-        <tr>
-          <td>Video tutorial (recorded, 5–15 min)</td>
-          <td><span class="badge badge-green">+180 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-amber">QA Review</span></td>
-          <td>2×</td>
-          <td>High</td>
-        </tr>
-        <tr>
-          <td>Infographic / visual explainer</td>
-          <td><span class="badge badge-green">+80 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-amber">Editor Review</span></td>
-          <td>4×</td>
-          <td>Medium</td>
-        </tr>
-        <!-- COMMUNITY -->
-        <tr><td colspan="7" style="background:rgba(34,201,122,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--green);padding:10px 16px">🤝 COMMUNITY TASKS</td></tr>
-        <tr>
-          <td rowspan="5">Community</td>
-          <td>Moderate forum / answer queries (per week)</td>
-          <td><span class="badge badge-green">+60 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-blue">Auto (activity log)</span></td>
-          <td>4×</td>
-          <td>Low</td>
-        </tr>
-        <tr>
-          <td>Organize a local community event</td>
-          <td><span class="badge badge-green">+300 DSC</span></td>
-          <td><span class="badge badge-purple">+1 DSC-P</span></td>
-          <td><span class="badge badge-amber">Admin + Photo Proof</span></td>
-          <td>2×</td>
-          <td>High</td>
-        </tr>
-        <tr>
-          <td>Peer mentor a junior volunteer (4-week cycle)</td>
-          <td><span class="badge badge-green">+250 DSC</span></td>
-          <td><span class="badge badge-purple">+1 DSC-P</span></td>
-          <td><span class="badge badge-amber">Admin Verified</span></td>
-          <td>2×</td>
-          <td>High</td>
-        </tr>
-        <tr>
-          <td>Translate content to regional language</td>
-          <td><span class="badge badge-green">+100 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-amber">Language Lead</span></td>
-          <td>6×</td>
-          <td>Medium</td>
-        </tr>
-        <tr>
-          <td>Recruit a verified new volunteer</td>
-          <td><span class="badge badge-green">+150 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-blue">Auto (referral code)</span></td>
-          <td>5×</td>
-          <td>Medium</td>
-        </tr>
-        <!-- TECH -->
-        <tr><td colspan="7" style="background:rgba(77,158,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--blue);padding:10px 16px">💻 TECHNICAL VOLUNTEERING</td></tr>
-        <tr>
-          <td rowspan="5">Technical</td>
-          <td>Open-source PR merged (minor bug fix)</td>
-          <td><span class="badge badge-green">+200 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-blue">GitHub API auto</span></td>
-          <td>8×</td>
-          <td>Medium</td>
-        </tr>
-        <tr>
-          <td>Open-source PR merged (feature / major)</td>
-          <td><span class="badge badge-green">+500 DSC</span></td>
-          <td><span class="badge badge-purple">+2 DSC-P</span></td>
-          <td><span class="badge badge-blue">GitHub API auto</span></td>
-          <td>3×</td>
-          <td>Very High</td>
-        </tr>
-        <tr>
-          <td>Build/maintain a platform tool or widget</td>
-          <td><span class="badge badge-green">+400 DSC</span></td>
-          <td><span class="badge badge-purple">+2 DSC-P</span></td>
-          <td><span class="badge badge-amber">Tech Lead Review</span></td>
-          <td>2×</td>
-          <td>Very High</td>
-        </tr>
-        <tr>
-          <td>Conduct a technical workshop/webinar</td>
-          <td><span class="badge badge-green">+350 DSC</span></td>
-          <td><span class="badge badge-purple">+1 DSC-P</span></td>
-          <td><span class="badge badge-amber">Admin + Attendance log</span></td>
-          <td>2×</td>
-          <td>High</td>
-        </tr>
-        <tr>
-          <td>Data entry / research task (batch)</td>
-          <td><span class="badge badge-green">+80 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-blue">Auto (completion)</span></td>
-          <td>8×</td>
-          <td>Low</td>
-        </tr>
-        <!-- EVENTS -->
-        <tr><td colspan="7" style="background:rgba(160,100,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:#C080FF;padding:10px 16px">🎤 EVENTS & CAMPAIGNS</td></tr>
-        <tr>
-          <td rowspan="4">Events</td>
-          <td>Attend a Disha flagship event</td>
-          <td><span class="badge badge-green">+100 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-blue">QR Check-in</span></td>
-          <td>6×</td>
-          <td>Low</td>
-        </tr>
-        <tr>
-          <td>Volunteer at a Disha flagship event (full day)</td>
-          <td><span class="badge badge-green">+400 DSC</span></td>
-          <td><span class="badge badge-purple">+2 DSC-P</span></td>
-          <td><span class="badge badge-amber">Event Lead Sign-off</span></td>
-          <td>4×</td>
-          <td>High</td>
-        </tr>
-        <tr>
-          <td>Social media campaign contribution (verified reach)</td>
-          <td><span class="badge badge-green">+75 DSC</span></td>
-          <td>—</td>
-          <td><span class="badge badge-blue">Social API link</span></td>
-          <td>4×</td>
-          <td>Low</td>
-        </tr>
-        <tr>
-          <td>Represent Disha at external conference/fair</td>
-          <td><span class="badge badge-green">+500 DSC</span></td>
-          <td><span class="badge badge-purple">+3 DSC-P</span></td>
-          <td><span class="badge badge-amber">Admin Verified + Evidence</span></td>
-          <td>2×</td>
-          <td>Very High</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="guardrail-grid">
-    <div class="guardrail-item">
-      <h4>🛡️ Anti-Gaming Cap</h4>
-      <p>Hard ceiling of 2,000 DSC earned per calendar month from any single category. Users cannot earn more than 5,000 DSC total per month regardless of activity count.</p>
-    </div>
-    <div class="guardrail-item">
-      <h4>⏱️ Cooldown Rules</h4>
-      <p>Same activity type has a 48-hour cooldown window. Bulk submissions of the same task within 24 hours triggers manual review before any coins are credited.</p>
-    </div>
-    <div class="guardrail-item">
-      <h4>✅ Verification Queue</h4>
-      <p>Auto-verified activities (GitHub, QR, referral) credit within 2 hours. Editor/Admin-reviewed activities have a 72-hour SLA. Disputed submissions go to a 2-reviewer panel.</p>
-    </div>
-    <div class="guardrail-item">
-      <h4>🔒 Quality Gate</h4>
-      <p>Content with plagiarism score &gt;20% (Copyscape/Turnitin API) is auto-rejected. Community reports of low-quality work trigger a 7-day earning suspension pending review.</p>
+    <div class="tok-band-stats">
+      <div class="tok-stat-box">
+        <div class="tok-stat-icon">🎓</div>
+        <div class="tok-stat-label">Skill Courses</div>
+      </div>
+      <div class="tok-stat-box">
+        <div class="tok-stat-icon">🤖</div>
+        <div class="tok-stat-label">AI Career Counseling</div>
+      </div>
+      <div class="tok-stat-box">
+        <div class="tok-stat-icon">💼</div>
+        <div class="tok-stat-label">Live Internships</div>
+      </div>
+      <div class="tok-stat-box">
+        <div class="tok-stat-icon">🏆</div>
+        <div class="tok-stat-label">Verified Certificates</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<hr class="divider"/>
 
-<!-- ═══ SECTION 3: REDEMPTION MATRIX ═══ -->
-<div class="section">
-  <div class="section-label">Section 1.3</div>
-  <h2 class="section-title">Redemption Matrix — TalentGro Global</h2>
-  <p class="section-sub">Users redeem DSC at checkout. Hard caps protect profitability. Premium DSC-P unlocks services that cannot be accessed with base DSC alone.</p>
+<!-- ═══════════════════════════════════════════════
+     COIN TYPES
+═══════════════════════════════════════════════ -->
+<section class="section" id="coins" aria-labelledby="coins-title">
+  <div class="tok-section-inner">
+    <span class="section-eyebrow reveal">Your Wallet</span>
+    <h2 class="section-title reveal" id="coins-title">Two Types of Rewards</h2>
+    <p class="section-body reveal" style="max-width:640px;margin:0 auto 48px;">Every verified volunteer action earns you coins. The more impactful the action, the more valuable the reward.</p>
 
-  <div class="tbl-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Service / Course Type</th>
-          <th>Price Range (₹)</th>
-          <th>Max Wallet %</th>
-          <th>DSC Cap</th>
-          <th>DSC-P Bonus</th>
-          <th>Min DSC to Unlock</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td colspan="7" style="background:rgba(245,166,35,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--gold);padding:10px 16px">📚 SELF-PACED COURSES</td></tr>
-        <tr>
-          <td>Starter / Free-tier course</td>
-          <td>₹0</td>
-          <td>N/A</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>Already free; no redemption needed</td>
-        </tr>
-        <tr>
-          <td>Foundation course (recorded)</td>
-          <td>₹499–₹1,999</td>
-          <td><span class="badge badge-green">30%</span></td>
-          <td>600 DSC</td>
-          <td>—</td>
-          <td>200 DSC</td>
-          <td>Good entry-level incentive</td>
-        </tr>
-        <tr>
-          <td>Professional course (recorded)</td>
-          <td>₹2,000–₹5,999</td>
-          <td><span class="badge badge-amber">25%</span></td>
-          <td>1,500 DSC</td>
-          <td>+5% if DSC-P holder</td>
-          <td>500 DSC</td>
-          <td>Sweet spot for most users</td>
-        </tr>
-        <tr>
-          <td>Advanced / Specialization course</td>
-          <td>₹6,000–₹14,999</td>
-          <td><span class="badge badge-amber">20%</span></td>
-          <td>3,000 DSC</td>
-          <td>+5% if DSC-P holder</td>
-          <td>1,000 DSC</td>
-          <td>Protects high-value margins</td>
-        </tr>
-        <tr><td colspan="7" style="background:rgba(34,201,122,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--green);padding:10px 16px">🎓 LIVE COHORT PROGRAMS</td></tr>
-        <tr>
-          <td>Live cohort — short (4–8 weeks)</td>
-          <td>₹5,000–₹12,000</td>
-          <td><span class="badge badge-amber">20%</span></td>
-          <td>2,400 DSC</td>
-          <td>+5% if DSC-P holder</td>
-          <td>800 DSC</td>
-          <td>Live instruction has higher cost base</td>
-        </tr>
-        <tr>
-          <td>Live cohort — long (3–6 months)</td>
-          <td>₹15,000–₹50,000</td>
-          <td><span class="badge badge-red">15%</span></td>
-          <td>7,500 DSC</td>
-          <td>+3% if DSC-P holder</td>
-          <td>2,000 DSC</td>
-          <td>Cap lower; margin must be protected</td>
-        </tr>
-        <tr>
-          <td>Bootcamp / Intensive program</td>
-          <td>₹30,000–₹1,00,000</td>
-          <td><span class="badge badge-red">10%</span></td>
-          <td>10,000 DSC</td>
-          <td>+2% if DSC-P holder</td>
-          <td>3,000 DSC</td>
-          <td>For flagship programs; strict cap</td>
-        </tr>
-        <tr><td colspan="7" style="background:rgba(77,158,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:var(--blue);padding:10px 16px">🧑‍💼 CAREER DEVELOPMENT SERVICES</td></tr>
-        <tr>
-          <td>Resume-building tools & assessments (AI-based)</td>
-          <td>₹299–₹999</td>
-          <td><span class="badge badge-green">50%</span></td>
-          <td>500 DSC</td>
-          <td>—</td>
-          <td>200 DSC</td>
-          <td>High incentive; low cost</td>
-        </tr>
-        <tr>
-          <td>Mock interview session (1 session)</td>
-          <td>₹500–₹1,500</td>
-          <td><span class="badge badge-green">40%</span></td>
-          <td>600 DSC</td>
-          <td>—</td>
-          <td>200 DSC</td>
-          <td>Strong engagement driver</td>
-        </tr>
-        <tr>
-          <td>AI-based career counseling & mapping (60 min)</td>
-          <td>₹1,500–₹3,000</td>
-          <td><span class="badge badge-amber">30%</span></td>
-          <td>900 DSC</td>
-          <td>DSC-P: full session unlock</td>
-          <td>5 DSC-P</td>
-          <td>DSC-P can unlock this service fully</td>
-        </tr>
-        <tr>
-          <td>LinkedIn profile audit & job portal access</td>
-          <td>₹799–₹2,000</td>
-          <td><span class="badge badge-green">40%</span></td>
-          <td>800 DSC</td>
-          <td>—</td>
-          <td>300 DSC</td>
-          <td>Career service with good margins</td>
-        </tr>
-        <tr>
-          <td>Job portal access & mentorship from industry experts</td>
-          <td>₹999</td>
-          <td><span class="badge badge-purple">DSC-P Only</span></td>
-          <td>—</td>
-          <td>10 DSC-P unlocks</td>
-          <td>10 DSC-P</td>
-          <td>Premium-only; creates prestige tier</td>
-        </tr>
-        <tr>
-          <td>Placement assistance & live project internship program</td>
-          <td>₹25,000+</td>
-          <td><span class="badge badge-red">5%</span></td>
-          <td>1,250 DSC</td>
-          <td>+5% if Elite tier</td>
-          <td>5,000 DSC</td>
-          <td>Minimal; avoid P&amp;L risk</td>
-        </tr>
-        <tr><td colspan="7" style="background:rgba(160,100,255,.05);font-weight:700;font-size:.75rem;letter-spacing:.1em;color:#C080FF;padding:10px 16px">🏆 CERTIFICATIONS</td></tr>
-        <tr>
-          <td>TalentGro digital certificate (any course)</td>
-          <td>₹199</td>
-          <td><span class="badge badge-green">100%</span></td>
-          <td>400 DSC</td>
-          <td>—</td>
-          <td>400 DSC</td>
-          <td>Can be fully free for top volunteers</td>
-        </tr>
-        <tr>
-          <td>Disha × TalentGro co-branded certificate</td>
-          <td>Free</td>
-          <td>N/A</td>
-          <td>—</td>
-          <td>Auto on 1,000+ DSC lifetime</td>
-          <td>1,000 DSC (lifetime)</td>
-          <td>Major retention and branding driver</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="tok-coin-grid">
+      <!-- DSC -->
+      <div class="tok-coin-card reveal" style="transition-delay:0.1s">
+        <div class="tok-coin-icon">🪙</div>
+        <div class="tok-coin-tag tok-tag-amber">Standard Coin</div>
+        <h3 class="tok-coin-name">DiSha Coin <span style="font-size:1rem;font-weight:400;color:var(--grey);">(DSC)</span></h3>
+        <div class="tok-coin-rate">100 DSC = ₹50 off</div>
+        <p class="tok-coin-desc">Earned for every verified volunteer activity — writing articles, attending events, helping your community, and more. Use them at checkout on TalentGro to get real money off courses, career tools, and assessments.</p>
+        <ul class="tok-coin-rules">
+          <li>✓ Minimum 200 DSC to redeem per transaction</li>
+          <li>✓ Valid for 18 months from last activity</li>
+          <li>✓ Non-transferable — yours to keep and grow</li>
+        </ul>
+      </div>
 
-  <div class="formula">
-    Discount Amount = min( course_price × max_wallet_pct , dsc_spent × 0.005 )<br>
-    Example: ₹3,000 course, 25% cap → max discount = ₹750 → requires 750÷0.005 = 1,500 DSC<br>
-    DSC-P Bonus stacks additively: 25% base + 5% DSC-P bonus = 30% total cap<br>
-    Minimum order value after discount: ₹99 (prevents zero-rupee orders)
-  </div>
-</div>
-
-<hr class="divider"/>
-
-<!-- ═══ SECTION 4: TIER SYSTEM ═══ -->
-<div class="section">
-  <div class="section-label">Section 1.4</div>
-  <h2 class="section-title">Volunteer Tier System</h2>
-  <p class="section-sub">Lifetime accumulated DSC (not spendable balance) determines tier. Spending coins never causes tier demotion — this prevents users from hoarding instead of engaging.</p>
-
-  <div class="tier-grid">
-    <div class="tier-card">
-      <div class="tier-badge" style="background:rgba(255,255,255,.1);color:var(--muted)">ENTRY</div>
-      <div class="tier-icon">🌱</div>
-      <div class="tier-name" style="color:#888">SEEDLING</div>
-      <div class="tier-range">0 – 999 DSC lifetime</div>
-      <ul class="tier-perks">
-        <li>Basic wallet access</li>
-        <li>1 free resume review/yr</li>
-        <li>Disha community badge</li>
-        <li>Course discounts up to cap</li>
-      </ul>
+      <!-- DSC-P -->
+      <div class="tok-coin-card reveal tok-coin-card--premium" style="transition-delay:0.2s">
+        <div class="tok-coin-icon">💎</div>
+        <div class="tok-coin-tag tok-tag-coral">Premium Token</div>
+        <h3 class="tok-coin-name">DiSha Premium <span style="font-size:1rem;font-weight:400;color:var(--grey);">(DSC-P)</span></h3>
+        <div class="tok-coin-rate">1 DSC-P = 5× value of DSC</div>
+        <p class="tok-coin-desc">Earned only for high-impact contributions — leading events, completing mentorship cycles, major open-source contributions, or representing Disha at a national conference. DSC-P unlocks exclusive career services that standard coins alone cannot access.</p>
+        <ul class="tok-coin-rules">
+          <li>💎 Unlocks: AI career counseling, mentorship, placement assistance</li>
+          <li>💎 Stacks with DSC for an even bigger discount</li>
+          <li>💎 Marks you as a top-tier contributor</li>
+        </ul>
+      </div>
     </div>
-    <div class="tier-card">
-      <div class="tier-badge" style="background:rgba(34,201,122,.2);color:var(--green)">ACTIVE</div>
-      <div class="tier-icon">⚡</div>
-      <div class="tier-name" style="color:var(--green)">CATALYST</div>
-      <div class="tier-range">1,000 – 4,999 DSC</div>
-      <ul class="tier-perks">
-        <li>+5% earning bonus</li>
-        <li>Priority verification queue</li>
-        <li>2 mock interviews/yr</li>
-        <li>Featured volunteer profile</li>
-        <li>Disha × TalentGro co-cert</li>
-      </ul>
-    </div>
-    <div class="tier-card" style="border-color:rgba(245,166,35,.4)">
-      <div class="tier-badge" style="background:rgba(245,166,35,.2);color:var(--gold)">SENIOR</div>
-      <div class="tier-icon">🔥</div>
-      <div class="tier-name" style="color:var(--gold)">IGNITER</div>
-      <div class="tier-range">5,000 – 14,999 DSC</div>
-      <ul class="tier-perks">
-        <li>+10% earning bonus</li>
-        <li>1 free career session/yr</li>
-        <li>LinkedIn recommendation</li>
-        <li>Early course access</li>
-        <li>Mentorship eligibility</li>
-        <li>Verified Volunteer badge</li>
-      </ul>
-    </div>
-    <div class="tier-card" style="border-color:rgba(160,100,255,.5)">
-      <div class="tier-badge" style="background:rgba(160,100,255,.2);color:#C080FF">ELITE</div>
-      <div class="tier-icon">👑</div>
-      <div class="tier-name" style="color:#C080FF">CHAMPION</div>
-      <div class="tier-range">15,000+ DSC lifetime</div>
-      <ul class="tier-perks">
-        <li>+15% earning bonus</li>
-        <li>Unlimited career services</li>
-        <li>Speaker slot priority</li>
-        <li>Equity partnership invite</li>
-        <li>Advisory board eligibility</li>
-        <li>Annual physical award</li>
-        <li>Job referral network free</li>
-      </ul>
+
+    <!-- Conversion visual -->
+    <div class="tok-conversion reveal" style="transition-delay:0.3s">
+      <div class="tok-conv-side">
+        <div class="tok-conv-label" style="color:var(--coral);">🤝 You on Disha</div>
+        <div class="tok-conv-amount">100 DSC</div>
+        <div class="tok-conv-sub">earned by volunteering</div>
+      </div>
+      <div class="tok-conv-arrow">⇄</div>
+      <div class="tok-conv-side">
+        <div class="tok-conv-label" style="color:var(--teal);">🎓 At TalentGro</div>
+        <div class="tok-conv-amount" style="color:var(--teal);">₹50 off</div>
+        <div class="tok-conv-sub">discount at checkout</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="footnote">
-    <strong>Business Sustainability Note:</strong> At the base rate of ₹50 per 100 DSC, and a 5,000 DSC monthly earning cap, the maximum monthly liability per user is ₹2,500 in discounts. Since each volunteer also drives ₹X in platform value (content, events, community growth), the ROI is strongly positive. The 30% maximum discount cap ensures TalentGro retains at minimum 70% revenue on every transaction. DSC-P prestige tokens keep high-value services gated, creating aspirational tiers that drive long-term retention without eroding the P&L.
+
+<!-- ═══════════════════════════════════════════════
+     EARNING MATRIX
+═══════════════════════════════════════════════ -->
+<section class="tok-off-band" id="earning" aria-labelledby="earn-title">
+  <div class="tok-section-inner">
+    <span class="section-eyebrow reveal">How You Earn</span>
+    <h2 class="section-title reveal" id="earn-title">Ways to Earn DiSha Coins</h2>
+    <p class="section-body reveal" style="max-width:640px;margin:0 auto 48px;">Every action is verified before coins are credited, so your wallet reflects real impact. Here's what you can do to build up your rewards.</p>
+
+    <!-- WAYS TO EARN sub-label -->
+    <div class="tok-sub-label reveal">
+      <span class="tok-sub-label-pill">📋 Ways to Earn</span>
+      <p class="tok-sub-label-note">Things you <em>do</em> — each action below earns you coins once verified.</p>
+    </div>
+
+    <!-- Content Creation -->
+    <div class="tok-earn-group reveal">
+      <div class="tok-earn-group-header">
+        <span class="tok-earn-cat-icon">✍️</span>
+        <h3 class="tok-earn-cat-title">Content Creation</h3>
+      </div>
+      <div class="tok-earn-cards">
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Short Article / Blog Post <span class="tok-earn-note">(500–900 words)</span></div>
+            <div class="tok-earn-verify">Editor Review</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+50 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Long-form Research Article <span class="tok-earn-note">(900–2,000 words)</span></div>
+            <div class="tok-earn-verify">Editor Review</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+120 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Case Study / Impact Report</div>
+            <div class="tok-earn-verify">Admin Verified</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+200 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Video Tutorial <span class="tok-earn-note">(5–15 min, recorded)</span></div>
+            <div class="tok-earn-verify">QA Review</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+180 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Infographic / Visual Explainer</div>
+            <div class="tok-earn-verify">Editor Review</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+80 DSC</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community Tasks -->
+    <div class="tok-earn-group reveal" style="transition-delay:0.1s">
+      <div class="tok-earn-group-header" style="background:rgba(62,201,138,0.08);border-color:var(--teal);">
+        <span class="tok-earn-cat-icon">🤝</span>
+        <h3 class="tok-earn-cat-title" style="color:var(--teal);">Community Tasks</h3>
+      </div>
+      <div class="tok-earn-cards">
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Moderate Forum / Answer Queries <span class="tok-earn-note">(per week)</span></div>
+            <div class="tok-earn-verify">Auto (activity log)</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+60 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Organise a Local Community Event</div>
+            <div class="tok-earn-verify">Admin + Photo Proof</div>
+          </div>
+          <div class="tok-earn-reward">
+            <span class="tok-badge tok-badge-teal">+300 DSC</span>
+            <span class="tok-badge tok-badge-purple">+1 DSC-P</span>
+          </div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Peer Mentor a Junior Volunteer <span class="tok-earn-note">(4-week cycle)</span></div>
+            <div class="tok-earn-verify">Admin Verified</div>
+          </div>
+          <div class="tok-earn-reward">
+            <span class="tok-badge tok-badge-teal">+250 DSC</span>
+            <span class="tok-badge tok-badge-purple">+1 DSC-P</span>
+          </div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Translate Content to a Regional Language</div>
+            <div class="tok-earn-verify">Language Lead</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+100 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Recruit a Verified New Volunteer</div>
+            <div class="tok-earn-verify">Auto (referral code)</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+150 DSC</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Volunteering -->
+    <div class="tok-earn-group reveal" style="transition-delay:0.2s">
+      <div class="tok-earn-group-header" style="background:rgba(50,48,160,0.06);border-color:var(--blue-pr);">
+        <span class="tok-earn-cat-icon">💻</span>
+        <h3 class="tok-earn-cat-title" style="color:var(--blue-pr);">Technical Volunteering</h3>
+      </div>
+      <div class="tok-earn-cards">
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Open-source PR Merged <span class="tok-earn-note">(minor bug fix)</span></div>
+            <div class="tok-earn-verify">GitHub Auto-verified</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+200 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Open-source PR Merged <span class="tok-earn-note">(major feature)</span></div>
+            <div class="tok-earn-verify">GitHub Auto-verified</div>
+          </div>
+          <div class="tok-earn-reward">
+            <span class="tok-badge tok-badge-teal">+500 DSC</span>
+            <span class="tok-badge tok-badge-purple">+2 DSC-P</span>
+          </div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Build or Maintain a Platform Tool / Widget</div>
+            <div class="tok-earn-verify">Tech Lead Review</div>
+          </div>
+          <div class="tok-earn-reward">
+            <span class="tok-badge tok-badge-teal">+400 DSC</span>
+            <span class="tok-badge tok-badge-purple">+2 DSC-P</span>
+          </div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Conduct a Technical Workshop or Webinar</div>
+            <div class="tok-earn-verify">Admin + Attendance Log</div>
+          </div>
+          <div class="tok-earn-reward">
+            <span class="tok-badge tok-badge-teal">+350 DSC</span>
+            <span class="tok-badge tok-badge-purple">+1 DSC-P</span>
+          </div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Data Entry / Research Task <span class="tok-earn-note">(batch)</span></div>
+            <div class="tok-earn-verify">Auto (completion)</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+80 DSC</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Events & Campaigns -->
+    <div class="tok-earn-group reveal" style="transition-delay:0.3s">
+      <div class="tok-earn-group-header" style="background:rgba(232,160,32,0.08);border-color:var(--amber);">
+        <span class="tok-earn-cat-icon">🎤</span>
+        <h3 class="tok-earn-cat-title" style="color:var(--amber);">Events &amp; Campaigns</h3>
+      </div>
+      <div class="tok-earn-cards">
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Attend a Disha Flagship Event</div>
+            <div class="tok-earn-verify">QR Check-in</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+100 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Volunteer at a Disha Event <span class="tok-earn-note">(full day)</span></div>
+            <div class="tok-earn-verify">Event Lead Sign-off</div>
+          </div>
+          <div class="tok-earn-reward">
+            <span class="tok-badge tok-badge-teal">+400 DSC</span>
+            <span class="tok-badge tok-badge-purple">+2 DSC-P</span>
+          </div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Social Media Campaign Contribution <span class="tok-earn-note">(verified reach)</span></div>
+            <div class="tok-earn-verify">Social API Link</div>
+          </div>
+          <div class="tok-earn-reward"><span class="tok-badge tok-badge-teal">+75 DSC</span></div>
+        </div>
+        <div class="tok-earn-item">
+          <div class="tok-earn-info">
+            <div class="tok-earn-action">Represent Disha at External Conference / Fair</div>
+            <div class="tok-earn-verify">Admin Verified + Evidence</div>
+          </div>
+          <div class="tok-earn-reward">
+            <span class="tok-badge tok-badge-teal">+500 DSC</span>
+            <span class="tok-badge tok-badge-purple">+3 DSC-P</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earning rules -->
+    <div class="tok-info-cards reveal" style="transition-delay:0.4s">
+      <div class="tok-info-card">
+        <div class="tok-info-icon">🛡️</div>
+        <h4>Fair Play Policy</h4>
+        <p>To keep rewards meaningful for everyone, each category has a monthly earning limit, and the same activity has a 48-hour cooldown before it can be submitted again.</p>
+      </div>
+      <div class="tok-info-card">
+        <div class="tok-info-icon">✅</div>
+        <h4>Verification Timeline</h4>
+        <p>Auto-verified activities (QR, GitHub, referral codes) credit within 2 hours. Activities requiring review are processed within 72 hours.</p>
+      </div>
+      <div class="tok-info-card">
+        <div class="tok-info-icon">🔒</div>
+        <h4>Quality Standards</h4>
+        <p>All content submissions go through a quality check. High-quality work gets credited; low-quality or duplicate content is returned for revision.</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
+
+<!-- ═══════════════════════════════════════════════
+     REDEMPTION GUIDE
+═══════════════════════════════════════════════ -->
+<section class="section" id="redeem" aria-labelledby="redeem-title">
+  <div class="tok-section-inner">
+    <span class="section-eyebrow reveal">Spend Your Coins</span>
+    <h2 class="section-title reveal" id="redeem-title">What Can You Unlock?</h2>
+    <p class="section-body reveal" style="max-width:640px;margin:0 auto 48px;">Your DiSha Coins work like a wallet discount at TalentGro Global checkout. The more you volunteer, the more you save — or even get for free.</p>
+
+    <!-- Self-paced courses -->
+    <h3 class="tok-redeem-cat reveal">📚 Self-Paced Courses</h3>
+    <div class="tok-redeem-grid">
+      <div class="tok-redeem-card reveal" style="transition-delay:0.05s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">🆓</span>
+          <div>
+            <div class="tok-redeem-name">Starter Courses</div>
+            <div class="tok-redeem-price">Free</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Already free — no coins needed. Just sign up and start learning.</p>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.1s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">📘</span>
+          <div>
+            <div class="tok-redeem-name">Foundation Course</div>
+            <div class="tok-redeem-price">₹499 – ₹1,999</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Use your coins for a big discount. Start redeeming from just 200 DSC.</p>
+        <div class="tok-redeem-badge">Min 200 DSC to unlock</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.15s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">📗</span>
+          <div>
+            <div class="tok-redeem-name">Professional Course</div>
+            <div class="tok-redeem-price">₹2,000 – ₹5,999</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Stack DSC coins for a solid course discount. DSC-P holders get an extra boost.</p>
+        <div class="tok-redeem-badge">Min 500 DSC to unlock</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.2s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">📙</span>
+          <div>
+            <div class="tok-redeem-name">Advanced / Specialization</div>
+            <div class="tok-redeem-price">₹6,000 – ₹14,999</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Earn more, save more. Premium coin holders get an additional discount bonus on top.</p>
+        <div class="tok-redeem-badge">Min 1,000 DSC to unlock</div>
+      </div>
+    </div>
+
+    <!-- Live cohorts -->
+    <h3 class="tok-redeem-cat reveal" style="margin-top:48px;">🎓 Live Cohort Programs</h3>
+    <div class="tok-redeem-grid">
+      <div class="tok-redeem-card reveal" style="transition-delay:0.05s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">📅</span>
+          <div>
+            <div class="tok-redeem-name">Short Cohort</div>
+            <div class="tok-redeem-price">₹5,000 – ₹12,000</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">4–8 week live cohorts with real instructors. DSC-P holders get an extra discount stacked on top.</p>
+        <div class="tok-redeem-badge">Min 800 DSC to unlock</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.1s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">🗓️</span>
+          <div>
+            <div class="tok-redeem-name">Long Cohort</div>
+            <div class="tok-redeem-price">₹15,000 – ₹50,000</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">3–6 month deep-dive programs. Discounts may be capped to keep rewards fair for everyone.</p>
+        <div class="tok-redeem-badge">Min 2,000 DSC to unlock</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.15s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">⚡</span>
+          <div>
+            <div class="tok-redeem-name">Bootcamp / Intensive</div>
+            <div class="tok-redeem-price">₹30,000 – ₹1,00,000</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Flagship intensive programs. Use your coins to meaningfully cut the price — DSC-P holders get an extra bonus on top.</p>
+        <div class="tok-redeem-badge">Min 3,000 DSC to unlock</div>
+      </div>
+    </div>
+
+    <!-- Career services -->
+    <h3 class="tok-redeem-cat reveal" style="margin-top:48px;">🧑‍💼 Career Development Services</h3>
+    <div class="tok-redeem-grid">
+      <div class="tok-redeem-card reveal" style="transition-delay:0.05s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">📄</span>
+          <div>
+            <div class="tok-redeem-name">Resume Tools &amp; Assessments</div>
+            <div class="tok-redeem-price">₹299 – ₹999</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">AI-powered resume builder and career assessments — one of the highest-value redemptions available.</p>
+        <div class="tok-redeem-badge">Min 200 DSC to unlock</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.1s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">🎙️</span>
+          <div>
+            <div class="tok-redeem-name">Mock Interview Session</div>
+            <div class="tok-redeem-price">₹500 – ₹1,500</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Practice with real interviewers and get personalised feedback. A great reward for active volunteers.</p>
+        <div class="tok-redeem-badge">Min 200 DSC to unlock</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.15s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">🤖</span>
+          <div>
+            <div class="tok-redeem-name">AI Career Counseling</div>
+            <div class="tok-redeem-price">₹1,500 – ₹3,000</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">60-minute personalised career counseling session. DSC-P holders can unlock the full session using only premium coins.</p>
+        <div class="tok-redeem-badge tok-redeem-badge--premium">💎 DSC-P Bonus Available</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.2s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">🔗</span>
+          <div>
+            <div class="tok-redeem-name">LinkedIn Audit &amp; Job Portal</div>
+            <div class="tok-redeem-price">₹799 – ₹2,000</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Get your LinkedIn reviewed and access the TalentGro job portal to find real opportunities faster.</p>
+        <div class="tok-redeem-badge">Min 300 DSC to unlock</div>
+      </div>
+      <div class="tok-redeem-card reveal tok-redeem-card--premium" style="transition-delay:0.25s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">💎</span>
+          <div>
+            <div class="tok-redeem-name">Expert Mentorship + Job Referrals</div>
+            <div class="tok-redeem-price">Premium Access</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Industry expert mentorship and job referral network access. Exclusively unlocked with DSC-P premium coins — the reward for your most impactful contributions.</p>
+        <div class="tok-redeem-badge tok-redeem-badge--premium">💎 DSC-P Only</div>
+      </div>
+      <div class="tok-redeem-card reveal" style="transition-delay:0.3s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">🚀</span>
+          <div>
+            <div class="tok-redeem-name">Placement Assistance &amp; Live Internship</div>
+            <div class="tok-redeem-price">₹25,000+</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Full placement support plus a live project internship. Use your coins to reduce the entry cost. Champion-tier volunteers get an additional bonus.</p>
+        <div class="tok-redeem-badge">Min 5,000 DSC to unlock</div>
+      </div>
+    </div>
+
+    <!-- Certificates -->
+    <h3 class="tok-redeem-cat reveal" style="margin-top:48px;">🏆 Certificates</h3>
+    <div class="tok-redeem-grid">
+      <div class="tok-redeem-card reveal" style="transition-delay:0.05s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">📜</span>
+          <div>
+            <div class="tok-redeem-name">TalentGro Digital Certificate</div>
+            <div class="tok-redeem-price">₹199</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Top volunteers can redeem a verified TalentGro certificate completely free using their coins — a career asset you can share with recruiters.</p>
+        <div class="tok-redeem-badge">400 DSC = 100% free</div>
+      </div>
+      <div class="tok-redeem-card reveal tok-redeem-card--highlight" style="transition-delay:0.1s">
+        <div class="tok-redeem-header">
+          <span class="tok-redeem-icon">🌟</span>
+          <div>
+            <div class="tok-redeem-name">Disha × TalentGro Co-Branded Certificate</div>
+            <div class="tok-redeem-price">Free — Auto-awarded</div>
+          </div>
+        </div>
+        <p class="tok-redeem-desc">Reach 1,000 lifetime DSC and this co-branded certificate from Disha and TalentGro is automatically sent to you — no redemption needed. A milestone every volunteer should aim for.</p>
+        <div class="tok-redeem-badge tok-redeem-badge--amber">🎯 Auto at 1,000 lifetime DSC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     VOLUNTEER TIER SYSTEM
+═══════════════════════════════════════════════ -->
+<section class="tok-tier-section" id="tiers" aria-labelledby="tiers-title">
+  <div class="tok-section-inner">
+    <span class="section-eyebrow reveal">Your Journey</span>
+    <h2 class="section-title reveal" id="tiers-title">Volunteer Tier System</h2>
+    <p class="section-body reveal" style="max-width:680px;margin:0 auto 12px;">Your tier is based on your <strong>lifetime total</strong> of DSC earned — it never goes down, even when you spend coins. Keep contributing and unlock more and more benefits along the way.</p>
+    <p class="section-body reveal" style="max-width:600px;margin:0 auto 40px;font-size:0.9rem;color:var(--grey);">Spending your coins never drops your tier — so redeem freely and keep growing.</p>
+
+    <!-- TIER JOURNEY teal band -->
+    <div class="tok-tier-band reveal" style="transition-delay:0.05s">
+      <div class="tok-tier-band-header">
+        <span class="tok-sub-label-pill tok-sub-label-pill--teal">🏅 Your Tier Journey</span>
+        <p class="tok-tier-band-note">Levels you <em>reach</em> — automatically unlocked as your lifetime coins grow.</p>
+      </div>
+
+      <div class="tok-tier-grid">
+        <!-- Seedling -->
+        <div class="tok-tier-card reveal" style="transition-delay:0.1s">
+          <div class="tok-tier-badge" style="background:rgba(100,100,100,0.1);color:#888;">Entry</div>
+          <div class="tok-tier-icon">🌱</div>
+          <h3 class="tok-tier-name">Seedling</h3>
+          <div class="tok-tier-range">0 – 999 lifetime DSC</div>
+          <ul class="tok-tier-perks">
+            <li>Wallet access &amp; coin redemptions</li>
+            <li>1 free resume review per year</li>
+            <li>Disha community badge</li>
+            <li>Course discounts on all eligible services</li>
+          </ul>
+        </div>
+
+        <!-- Catalyst -->
+        <div class="tok-tier-card reveal tok-tier-card--catalyst" style="transition-delay:0.2s">
+          <div class="tok-tier-badge" style="background:rgba(62,201,138,0.15);color:var(--teal);">Active</div>
+          <div class="tok-tier-icon">⚡</div>
+          <h3 class="tok-tier-name" style="color:var(--teal);">Catalyst</h3>
+          <div class="tok-tier-range">1,000 – 4,999 lifetime DSC</div>
+          <ul class="tok-tier-perks">
+            <li>+5% earning bonus on every action</li>
+            <li>Priority review queue</li>
+            <li>2 mock interviews per year</li>
+            <li>Featured volunteer profile</li>
+            <li>Auto Disha × TalentGro co-certificate</li>
+          </ul>
+        </div>
+
+        <!-- Igniter -->
+        <div class="tok-tier-card reveal tok-tier-card--igniter" style="transition-delay:0.3s">
+          <div class="tok-tier-badge" style="background:rgba(232,160,32,0.15);color:var(--amber);">Senior</div>
+          <div class="tok-tier-icon">🔥</div>
+          <h3 class="tok-tier-name" style="color:var(--amber);">Igniter</h3>
+          <div class="tok-tier-range">5,000 – 14,999 lifetime DSC</div>
+          <ul class="tok-tier-perks">
+            <li>+10% earning bonus on every action</li>
+            <li>1 free career counseling session per year</li>
+            <li>LinkedIn recommendation from Disha</li>
+            <li>Early access to new courses</li>
+            <li>Mentorship program eligibility</li>
+            <li>Verified Volunteer badge</li>
+          </ul>
+        </div>
+
+        <!-- Champion -->
+        <div class="tok-tier-card reveal tok-tier-card--champion" style="transition-delay:0.4s">
+          <div class="tok-tier-badge" style="background:rgba(232,80,60,0.15);color:var(--coral);">Elite</div>
+          <div class="tok-tier-icon">👑</div>
+          <h3 class="tok-tier-name" style="color:var(--coral);">Champion</h3>
+          <div class="tok-tier-range">15,000+ lifetime DSC</div>
+          <ul class="tok-tier-perks">
+            <li>+15% earning bonus on every action</li>
+            <li>Unlimited career development services</li>
+            <li>Speaker slot priority at Disha events</li>
+            <li>Equity partnership invite</li>
+            <li>Advisory board eligibility</li>
+            <li>Annual physical recognition award</li>
+            <li>Job referral network — free for life</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     CTA BAND
+═══════════════════════════════════════════════ -->
+<section class="tok-cta-band" aria-label="Call to action">
+  <div class="tok-cta-inner">
+    <h2 class="tok-cta-title">Ready to Start Earning?</h2>
+    <p class="tok-cta-sub">Every article written, every event attended, every friend invited — it all adds up. Start your volunteer journey today and watch your rewards grow.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <a href="5.html" class="btn-primary">Browse Active Programs →</a>
+      <a href="3.html" class="btn-secondary">Refer a Friend, Earn Together</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="tok-footer" role="contentinfo">
+  <div class="tok-footer-inner">
+    <p>© 2025 Disha For India Foundation and Educational Trust. All rights reserved.</p>
+    <div class="tok-footer-links">
+      <a href="index.html">Home</a>
+      <a href="3.html">Refer &amp; Earn</a>
+      <a href="4.html">Proof of Impact</a>
+      <a href="5.html">Active Programs</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div id="toast" role="alert" aria-live="polite" class="tok-toast"></div>
+
+<script>
+  /* ─── NAVBAR SCROLL ─── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  /* ─── MOBILE MENU ─── */
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+  function openMenu() { mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu() { mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  hamburger.addEventListener('click', openMenu);
+  mobileCloseBtn.addEventListener('click', closeMenu);
+  mobileOverlay.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  /* ─── SCROLL REVEAL ─── */
+  const revealEls = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => ro.observe(el));
+</script>
 </body>
 </html>
